@@ -1,0 +1,114 @@
+.hero {
+  padding-top: 90px;
+  background-image: url('../img/hero-bg.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  height: 630px;
+ &__title {
+   margin-bottom: 20px;
+ }
+  &__subtitle {
+    margin-bottom: 55px;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  &__btn {
+    width: 388px;
+    margin: 0 auto;
+  }
+}
+
+.news-slider {
+  margin-bottom: 80px;
+  &__item {
+    position: relative;
+  }
+  &__img {
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+  &__caption {
+    font-weight: 500;
+    font-size: 26px;
+    text-align: center;
+  }
+}
+.category-slider {
+  margin-bottom: 160px;
+}
+
+.about {
+  margin-bottom: 120px;
+  padding: 70px 0;
+  background-color: #000;
+  background-image: url('../img/about-bg.png');
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  color: #fff;
+  &__logo {
+    margin-bottom: 55px;
+  }
+  p {
+    margin-bottom: 35px;
+    font-size: 36px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__caption {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 33px;
+
+  }
+  &__description {
+    margin-bottom: 33px;
+    color: #000;
+    font-size: 26px;
+  }
+  &__brand {
+    margin-bottom: 120px;
+  }
+  &__btn {
+    width: 245px;
+  }
+}
+
+.service {
+  margin-bottom: 120px;
+  &__caption {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 26px;
+    font-weight: 300;
+  }
+  &__img {
+    margin-bottom: 120px;
+  }
+  &__item {
+    margin-bottom: 120px;
+    padding-left: 65px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 0;
+      width: 17px;
+      height: 100%;
+      background-color: $orange;
+    }
+  }
+}
+
+.main-search {
+  margin-top: -100px;
+  margin-bottom: 100px;
+}
