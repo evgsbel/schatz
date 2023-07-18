@@ -22,27 +22,28 @@
 // });
 //
 //
-// // mobile menu
-// $(() => {
-//   const btnMenu = document.querySelectorAll('.js-open-mobile-menu');
-//   const menu = document.querySelector('.js-mobile-menu');
-//   const body = document.querySelector('body');
-//   btnMenu.forEach(function (el) {
-//     el.addEventListener('click', function (e) {
-//       e.stopPropagation();
-//       menu.classList.add('is-open');
-//       body.classList.add('opened-menu')
-//     });
-//   })
-//   const closeBtn = document.querySelector('.js-close-mobile-menu');
-//   closeBtn.addEventListener('click', function (e) {
-//     e.stopPropagation();
-//     menu.classList.remove('is-open');
-//     body.classList.remove('opened-menu')
-//   });
-// });
-//
-//
+// mobile menu
+$(() => {
+  const btnMenu = document.querySelectorAll('.js-open-mobile-menu');
+  const menu = document.querySelector('.js-mobile-menu');
+  const body = document.querySelector('body');
+  btnMenu.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation();
+      el.classList.toggle('is-active')
+      menu.classList.toggle('is-open');
+      body.classList.toggle('opened-menu')
+    });
+  })
+  // const closeBtn = document.querySelector('.js-close-mobile-menu');
+  // closeBtn.addEventListener('click', function (e) {
+  //   e.stopPropagation();
+  //   menu.classList.remove('is-open');
+  //   body.classList.remove('opened-menu')
+  // });
+});
+
+
 
 //news slider
 

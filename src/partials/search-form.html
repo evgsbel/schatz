@@ -1,14 +1,16 @@
 <div class="search">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 p-0 p-sm-3">
         <form action="" class="search__form">
           <div class="search__group">
+            <p class="search__caption desktop-hidden">Поиск по номеру детали</p>
             <input class="search__input" type="text" name="article" id="article"
                    placeholder="OEM, артикул Schatz, аналог...">
-            <p class="search__caption">Поиск по номеру детали</p>
+            <p class="search__caption mobile-hidden">Поиск по номеру детали</p>
           </div>
           <div class="search__group search__group_right">
+            <p class="search__caption search__caption_right desktop-hidden">Поиск по характеристикам автомобиля</p>
           <select class="search__select" name="mark" id="mark">
             <option value="mark" selected>Марка</option>
             <option value="value1">value1</option>
@@ -54,7 +56,7 @@
             <option value="value5">value5</option>
             <option value="value6">value6</option>
           </select>
-            <p class="search__caption search__caption_right">Поиск по характеристикам автомобиля</p>
+            <p class="search__caption search__caption_right mobile-hidden">Поиск по характеристикам автомобиля</p>
             <button class="btn btn-reset search__btn">Поиск</button>
           </div>
         </form>

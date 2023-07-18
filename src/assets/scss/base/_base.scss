@@ -129,3 +129,16 @@ img {
     }
   }
 }
+
+.desktop-hidden {
+  @include rmin(1024) {
+    display: none;
+  }
+}
+.mobile-hidden {
+  @include r(1024) {
+    display: none;
+  }
+}
+
+

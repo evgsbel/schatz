@@ -1,6 +1,6 @@
 .hero {
   padding-top: 90px;
-  background-image: url('../img/hero-bg.jpg');
+  background-image: url('../img/hero-bg.png');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -15,6 +15,9 @@
     font-size: 34px;
     font-weight: 500;
     line-height: 1.2;
+    @include r(576) {
+      font-size: 18px;
+    }
   }
   &__btn {
     width: 388px;
@@ -30,6 +33,7 @@
   &__img {
     margin-bottom: 30px;
     border-radius: 20px;
+    width: 100%;
   }
   &__caption {
     font-weight: 500;
@@ -39,6 +43,9 @@
 }
 .category-slider {
   margin-bottom: 160px;
+  @include r(576) {
+    margin-bottom: 60px;
+  }
 }
 
 .about {
@@ -50,12 +57,22 @@
   background-repeat: no-repeat;
   background-size: 35%;
   color: #fff;
+  @include r(576) {
+    margin-bottom: 60px;
+  }
+  @include r(1024) {
+    background-image: none;
+    border-radius: 18px;
+  }
   &__logo {
     margin-bottom: 55px;
   }
   p {
     margin-bottom: 35px;
     font-size: 36px;
+    @include r(576) {
+      font-size: 18px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -64,38 +81,78 @@
     font-weight: 700;
     font-size: 36px;
     margin-bottom: 33px;
-
+    @include r(1024) {
+      text-align: center;
+    }
   }
   &__description {
     margin-bottom: 33px;
     color: #000;
     font-size: 26px;
+    @include r(576) {
+      font-size: 18px;
+    }
   }
   &__brand {
     margin-bottom: 120px;
   }
   &__btn {
     width: 245px;
+    @include r(1024) {
+      margin: 0 auto;
+    }
+  }
+  &__brand-img {
+    @include r(1024) {
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 80%;
+    margin-left: -15px;
   }
 }
 
 .service {
   margin-bottom: 120px;
+  @include r(576) {
+    margin-bottom: 60px;
+  }
   &__caption {
     margin-bottom: 30px;
     font-size: 36px;
     font-weight: 700;
+    @include r(768) {
+      text-align: center;
+    }
   }
   &__description {
     font-size: 26px;
     font-weight: 300;
+    @include r(576) {
+      font-size: 18px;
+    }
   }
   &__img {
     margin-bottom: 120px;
+    @include r(1024) {
+      margin-bottom: 60px;
+    }
+    @include r(768) {
+      width: 100%;
+    }
   }
   &__item {
     margin-bottom: 120px;
     padding-left: 65px;
+    @include r(1024) {
+      margin-bottom: 60px;
+    }
+    @include r(768) {
+      padding-left: 15px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -104,6 +161,9 @@
       width: 17px;
       height: 100%;
       background-color: $orange;
+      @include r(768) {
+        content: none;
+      }
     }
   }
 }
@@ -111,4 +171,7 @@
 .main-search {
   margin-top: -100px;
   margin-bottom: 100px;
+  @include r(768) {
+    margin-top: -20px;
+  }
 }

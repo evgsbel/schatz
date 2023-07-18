@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contacts Page</title>
+  <!-- build:css -->
+  <link rel="stylesheet" href="assets/vendor/css/animate.css">
+  <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body class="is-contacts-page">
+<header class="header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-8 col-lg-2 col-xl-3">
+        <a href="home.html" class="logo header__logo">
+          <svg width="100%" height="64">
+            <use xlink:href="assets/img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="col-4 col-lg-9 col-xl-8">
+        <button class="btn-reset burger js-burger js-open-mobile-menu">
+              <span class="burger__lines">
+                <i></i><i></i><i></i>
+              </span>
+        </button>
+
+        <nav class="nav header__nav js-mobile-menu">
+          <ul class="nav__list">
+            <li class="nav__item is-active collapsed sub-item ">
+              <a href="category.html" data-toggle="collapse" data-target="#collapseOne" class="nav__link ">Автозапчасти</a>
+              <ul class="sub-menu collapse" id="collapseOne" data-parent="">
+                <li class="sub-menu__item">
+                  <a href="" class="sub-menu__link">Рулевые наконечники</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="" class="sub-menu__link">Опоры амортизатора</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="" class="sub-menu__link">Шаровые опоры</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="" class="sub-menu__link">Рычаги подвески</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="" class="sub-menu__link">Сайлентблоки</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="" class="sub-menu__link">Рулевые тяги</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="" class="sub-menu__link">Тяги стабилизатора</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="" class="sub-menu__link">Опоры двигателя</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav__item"><a href="" class="nav__link">Автохимия</a></li>
+            <li class="nav__item"><a href="" class="nav__link">Качество</a></li>
+            <li class="nav__item"><a href="" class="nav__link">Где купить</a></li>
+            <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+          </ul>
+          <div class="header__mobile-lang desktop-hidden">
+            <a href="" class="header__lang">
+              ru
+            </a>
+            <a href="" class="header__lang header__lang_trnsp">
+              en
+            </a>
+            <a href="" class="header__lang header__lang_trnsp">
+              de
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="col-md-1 d-lg-block d-none">
+        <a href="" class="header__lang">
+         ru
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Item-->
+<main role="main" class="main">
+  
+  <div class="inner-search mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+        <h2 class="title-h2">Поиск автозапчастей в каталоге Schatz</h2>
+        </div>
+      </div>
+    </div>
+    <div class="search">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 p-0 p-sm-3">
+            <form action="" class="search__form">
+              <div class="search__group">
+                <p class="search__caption desktop-hidden">Поиск по номеру детали</p>
+                <input class="search__input" type="text" name="article" id="article"
+                       placeholder="OEM, артикул Schatz, аналог...">
+                <p class="search__caption mobile-hidden">Поиск по номеру детали</p>
+              </div>
+              <div class="search__group search__group_right">
+                <p class="search__caption search__caption_right desktop-hidden">Поиск по характеристикам автомобиля</p>
+              <select class="search__select" name="mark" id="mark">
+                <option value="mark" selected>Марка</option>
+                <option value="value1">value1</option>
+                <option value="value2">value2</option>
+                <option value="value3">value3</option>
+                <option value="value4">value4</option>
+                <option value="value5">value5</option>
+                <option value="value6">value6</option>
+              </select>
+              <select class="search__select" name="model" id="model" disabled>
+                <option value="model" selected>Модель</option>
+                <option value="value1">value1</option>
+                <option value="value2">value2</option>
+                <option value="value3">value3</option>
+                <option value="value4">value4</option>
+                <option value="value5">value5</option>
+                <option value="value6">value6</option>
+              </select>
+              <select class="search__select" name="year" id="year" disabled>
+                <option value="year" selected>Год</option>
+                <option value="value1">value1</option>
+                <option value="value2">value2</option>
+                <option value="value3">value3</option>
+                <option value="value4">value4</option>
+                <option value="value5">value5</option>
+                <option value="value6">value6</option>
+              </select>
+              <select class="search__select" name="carcase" id="carcase" disabled>
+                <option value="carcase" selected>Кузов</option>
+                <option value="value1">value1</option>
+                <option value="value2">value2</option>
+                <option value="value3">value3</option>
+                <option value="value4">value4</option>
+                <option value="value5">value5</option>
+                <option value="value6">value6</option>
+              </select>
+              <select class="search__select" name="product-group" id="product-group" disabled>
+                <option value="product-group" selected>Товарная группа</option>
+                <option value="value1">value1</option>
+                <option value="value2">value2</option>
+                <option value="value3">value3</option>
+                <option value="value4">value4</option>
+                <option value="value5">value5</option>
+                <option value="value6">value6</option>
+              </select>
+                <p class="search__caption search__caption_right mobile-hidden">Поиск по характеристикам автомобиля</p>
+                <button class="btn btn-reset search__btn">Поиск</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section news-slider">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="title-h2 news-slider__title">Следите за нашими новостями</h2>
+          <div class="swiper js-news-slider news-slider__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide news__slider__item">
+                <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
+                <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
+                <a href="news.html" class="lnk"></a>
+              </div>
+              <div class="swiper-slide news__slider__item">
+                <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
+                <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
+                <a href="news.html" class="lnk"></a>
+              </div>
+              <div class="swiper-slide news__slider__item">
+                <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
+                <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
+                <a href="news.html" class="lnk"></a>
+              </div>
+              <div class="swiper-slide news__slider__item">
+                <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
+                <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
+                <a href="news.html" class="lnk"></a>
+              </div>
+              <div class="swiper-slide news__slider__item">
+                <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
+                <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
+                <a href="news.html" class="lnk"></a>
+              </div>
+              <div class="swiper-slide news__slider__item">
+                <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
+                <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
+                <a href="news.html" class="lnk"></a>
+              </div>
+              <div class="swiper-slide news__slider__item">
+                <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
+                <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
+                <a href="news.html" class="lnk"></a>
+              </div>
+              <div class="swiper-slide news__slider__item">
+                <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
+                <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
+                <a href="news.html" class="lnk"></a>
+              </div>
+            </div>
+          </div>
+          <div class="news-slider__nav-btn swiper-button-prev-news slider-navigation__btn slider-navigation__btn_prev">
+            <svg width="50" height="28">
+              <use xlink:href="assets/img/sprite.svg#slider-arrow-left"></use>
+            </svg>
+          </div>
+          <div class="news-slider__nav-btn swiper-button-next-news slider-navigation__btn slider-navigation__btn_next">
+            <svg width="50" height="28">
+              <use xlink:href="assets/img/sprite.svg#slider-arrow-right"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<div class="js-stop-header"></div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a href="home.html" class="logo footer__logo">
+          <svg width="252" height="64">
+            <use xlink:href="assets/img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="footer-nav footer__nav">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">О бренде</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Автозапчасти</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Автохимия</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Качество</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Где купить</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <a href="" class="footer__link">Юридическая информация</a>
+        <p class="footer__copy">&copy; 2023</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<!-- build:js -->
+<script src="assets/vendor/js/jquery.js"></script>
+<script src="assets/vendor/js/popper.js"></script>
+<script src="assets/vendor/js/bootstrap.js"></script>
+<script src="assets/vendor/js/swiper-bundle.js"></script>
+<script src="assets/vendor/js/inputmask.min.js"></script>
+<script src="assets/js/util/crossPlatform.js"></script>
+<script src="assets/js/app.js"></script>
+<!-- endbuild -->
+
+
+</body>
+
+</html>

@@ -1,10 +1,15 @@
 .search {
+
   &__form {
     display: flex;
     align-items: center;
     padding: 26px 30px;
     border-radius: 18px;
     background-color: #d9d9d9;
+    @include r(1024) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__input {
     margin-bottom: 30px;
@@ -14,8 +19,12 @@
     font-size: 18px;
     font-weight: 500;
     width: 307px;
+    max-width: 100%;
     height: 65px;
     border: none;
+    @include r(576) {
+      width: 100%;
+    }
     &:focus,
     &:active {
       outline: 1px solid $orange;
@@ -42,6 +51,9 @@
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
+    @include r(576) {
+      width: 100%;
+    }
     &::-ms-expand { display: none; }
     &:focus,
     &:active {
@@ -60,8 +72,16 @@
     padding-top: 20px;
     height: 48px;
     font-weight: 500;
+    @include r(1024) {
+      padding-top: 0;
+      margin-bottom: 20px;
+      height: auto;
+    }
     &_right {
       width: calc(100% - 250px);
+      @include r(1024) {
+        width: 100%;
+      }
     }
   }
   &__btn {
