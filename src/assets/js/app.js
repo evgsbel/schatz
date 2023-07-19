@@ -122,8 +122,8 @@ let swiperCategory = new Swiper(".js-category-slider", {
   speed: 900,
   breakpoints: {
     320: {
-      slidesPerView: 10,
-      spaceBetween: 0,
+      slidesPerView: 1,
+      spaceBetween: 10,
       grabCursor: true
     },
     576: {
