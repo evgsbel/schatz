@@ -11657,6 +11657,11 @@ body {
   background-color: #fff;
   color: #000;
 }
+@media only screen and (max-width: 1024px) {
+  body.opened-menu {
+    overflow: hidden;
+  }
+}
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -11929,8 +11934,16 @@ ul {
 
 .header {
   padding: 40px 0;
+  background-color: #fff;
 }
-@media only screen and (max-width: 1024px) {
+.header_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+@media only screen and (max-width: 1280px) {
   .header {
     padding: 20px;
   }
@@ -12125,8 +12138,8 @@ ul {
   }
 }
 .sub-item .nav__link.collapsed::after {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .sub-menu {
@@ -12366,6 +12379,11 @@ ul {
 .search__select:focus, .search__select:active {
   outline: 1px solid #ec8020;
 }
+@media only screen and (max-width: 576px) {
+  .search__group {
+    width: 100%;
+  }
+}
 .search__group_right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12404,6 +12422,11 @@ ul {
   width: 243px;
   height: 48px;
 }
+@media only screen and (max-width: 576px) {
+  .search__btn {
+    width: 100%;
+  }
+}
 
 .advantages {
   margin-bottom: 80px;
@@ -12411,8 +12434,18 @@ ul {
 .advantages__item {
   text-align: center;
 }
+@media only screen and (max-width: 768px) {
+  .advantages__item {
+    margin-bottom: 20px;
+  }
+}
 .advantages__icon {
   margin-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .advantages__icon {
+    margin-bottom: 20px;
+  }
 }
 .advantages__caption {
   margin-bottom: 15px;
@@ -12471,6 +12504,11 @@ ul {
   background-size: cover;
   text-align: center;
   height: 630px;
+}
+@media only screen and (max-width: 768px) {
+  .hero {
+    background-image: url("../img/hero-bg-mobile.png");
+  }
 }
 .hero__title {
   margin-bottom: 20px;
@@ -12592,7 +12630,6 @@ ul {
   }
 }
 .about__img {
-  display: block;
   max-width: 80%;
   margin-left: -15px;
 }

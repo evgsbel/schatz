@@ -61,6 +61,9 @@
     }
   }
   &__group {
+    @include r(576) {
+      width: 100%;
+    }
     &_right {
       display: flex;
       align-items: center;
@@ -88,5 +91,8 @@
     font-size: 24px;
     width: 243px;
     height: 48px;
+    @include r(576) {
+      width: 100%;
+    }
   }
 }

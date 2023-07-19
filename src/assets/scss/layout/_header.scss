@@ -1,6 +1,14 @@
 .header {
   padding: 40px 0;
-  @include r(1024) {
+  background-color: #fff;
+  &_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  @include r(1280) {
     padding: 20px;
   }
   &__lang {
@@ -141,7 +149,7 @@
       }
     }
     &.collapsed::after {
-      transform: rotate(180deg);
+      transform: rotate(-90deg);
     }
   }
 }

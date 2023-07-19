@@ -2,14 +2,21 @@
   margin-bottom: 80px;
   &__item {
     text-align: center;
+    @include r(768) {
+      margin-bottom: 20px;
+    }
   }
   &__icon {
     margin-bottom: 40px;
+    @include r(768) {
+      margin-bottom: 20px;
+    }
   }
   &__caption {
     margin-bottom: 15px;
     font-weight: 700;
     font-size: 23px;
+
   }
   &__description {
     font-size: 18px;
