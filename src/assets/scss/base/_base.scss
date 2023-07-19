@@ -116,13 +116,19 @@ img {
       opacity: .8;
     }
     &_prev {
-      left: -30px;
+      left: -50px;
+      @include r(1400) {
+        left: -30px;
+      }
       @include r(1280) {
         left: 0;
       }
     }
     &_next {
-      right: -30px;
+      right: -50px;
+      @include r(1400) {
+        right: -30px;
+      }
       @include r(1280) {
         right: 0;
       }

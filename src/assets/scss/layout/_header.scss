@@ -48,8 +48,9 @@
   }
   &__logo  {
     svg {
-      @include r(1024) {
         width: auto;
+        max-width: 250px;
+      @include r(1024) {
         max-width: 200px;
       }
     }
@@ -81,6 +82,7 @@
   }
   &__list {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 0 25px;
     width: 100%;
