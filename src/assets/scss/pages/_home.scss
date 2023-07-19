@@ -42,6 +42,9 @@
     font-weight: 700;
     font-size: 26px;
     text-align: center;
+    @include r(768) {
+      font-size: 18px;
+    }
   }
 }
 .category-slider {
@@ -176,5 +179,312 @@
   margin-bottom: 100px;
   @include r(768) {
     margin-top: -20px;
+  }
+}
+
+
+// catalog
+.catalog {
+  margin-bottom: 140px;
+  &__row {
+  gap: 70px 0;
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__caption {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    width: 200px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+//category
+.category {
+  &__wrapper {
+    margin-bottom: 45px;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    @include r(768) {
+      margin-top: 20px;
+    }
+  }
+  &__text {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.product-list {
+  margin: 60px 0;
+  &__heading {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 25px;
+    margin-bottom: 25px;
+    @include r(1024) {
+      display: none;
+    }
+  }
+  &__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    @include r(1024) {
+      font-size: 16px;
+    }
+  }
+  &__wrapper {
+    gap: 30px 0;
+    @include r(1024) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px 0;
+    }
+  }
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 25px;
+    align-items: center;
+    margin-bottom: 30px;
+    @include r(1024) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 0 0 30%;
+      padding: 8px;
+      margin-bottom: 0;
+      border: 1px solid #f5f5f5;
+    }
+    @include r(768) {
+      flex: 0 0 48%;
+    }
+    @include r(480) {
+      flex: 0 0 100%;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    @include r(1024) {
+      margin: 0 auto;
+    }
+  }
+  &__properties {
+    text-align: center;
+    font-weight: 500;
+    @include r(1024) {
+      text-align: left;
+    }
+    &::before {
+      margin-right: 10px;
+      content: attr(data-label) ":";
+      font-weight: 700;
+      @include rmin(1024) {
+        content: none;
+      }
+    }
+  }
+  &__how {
+    span {
+      font-size: 18px;
+      font-weight: 500;
+      @include r(480) {
+        font-size: 16px;
+      }
+    }
+    select {
+      margin: 0 8px;
+      padding: 0 40px 0 13px;
+      font-size: 18px;
+      font-weight: 500;
+      border: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='13' viewBox='0 0 22 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1110_62)'%3E%3Cpath d='M0.660034 0.660156L10.89 10.8902L21.27 1.00016' stroke='%23231F20' stroke-width='1.86' stroke-miterlimit='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1110_62'%3E%3Crect width='21.92' height='12.19' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A"), linear-gradient(to bottom, #f5f5f5 0%,#f5f5f5 100%);
+      background-repeat: no-repeat, repeat;
+      background-position: right .7em top 50%, 0 0;
+      background-size: .65em auto, 100%;
+      background-color: #f5f5f5;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      height: 30px;
+      &::-ms-expand { display: none; }
+      &:focus,
+      &:active {
+        outline: 1px solid $orange;
+      }
+    }
+  }
+  &__pagination {
+    justify-content: flex-end;
+    @include r(768) {
+      margin-top: 30px;
+      justify-content: center;
+    }
+  }
+}
+
+
+//product
+.product {
+  margin-bottom: 65px;
+  &__img {
+    margin-bottom: 75px;
+    border-left: 17px solid $orange;
+    @include r(576) {
+      border: none;
+      }
+  }
+  &__double {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    @include r(768) {
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    img {
+      margin-bottom: 18px;
+      border-left: 11px solid $orange;
+      @include r(576) {
+        border: none;
+      }
+    }
+    span {
+      display: block;
+      font-weight: 700;
+      color: $orange;
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 700;
+    @include r(576) {
+      font-size: 20px;
+    }
+  }
+  &__heading {
+    display: none;
+    &_desktop {
+      @include rmin(768) {
+        display: block;
+      }
+    }
+    &_mobile {
+      @include r(768) {
+        display: block;
+      }
+    }
+  }
+  &__article {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    color: $orange;
+    @include r(576) {
+      font-size: 20px;
+    }
+  }
+  &__caption {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    @include r(576) {
+      font-size: 14px;
+    }
+  }
+  &__list {
+    margin-bottom: 55px;
+  }
+  &__property {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 30px;
+    p {
+      width: 50%;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.8;
+      @include r(576) {
+      font-size: 14px;
+      }
+    }
+    span {
+      font-weight: 300;
+    }
+  }
+  &__btn {
+    width: 290px;
+    height: 45px;
+  }
+}
+
+.auto-list {
+  margin-bottom: 65px;
+  &__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__line {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    margin-bottom: 5px;
+    grid-gap: 20px;
+    min-width: 1024px;
+    overflow: auto;
+    @include r(576) {
+      min-width: 800px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    font-size: 18px;
+    font-weight: 500;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include r(576) {
+      font-size: 14px;
+    }
+    &_head {
+      background-color: #f5f5f5;
+    }
   }
 }

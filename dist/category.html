@@ -36,7 +36,7 @@
             <nav class="nav header__nav js-mobile-menu">
               <ul class="nav__list">
                 <li class="nav__item collapsed sub-item desktop-hidden">
-                  <a href="category.html" data-toggle="collapse" data-target="#collapseOne" class="nav__link ">Автозапчасти</a>
+                  <a href="catalog.html" data-toggle="collapse" data-target="#collapseOne" class="nav__link">Автозапчасти</a>
                   <ul class="sub-menu collapse" id="collapseOne" data-parent="">
                     <li class="sub-menu__item">
                       <a href="" class="sub-menu__link">Рулевые наконечники</a>
@@ -64,11 +64,13 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav__item is-active mobile-hidden"><a href="" class="nav__link ">Автозапчасти</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Автохимия</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Качество</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Где купить</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+                <li class="nav__item is-active mobile-hidden">
+                  <a href="catalog.html" class="nav__link ">Автозапчасти</a>
+                </li>
+                <li class="nav__item"><a href="aerosol-category.html" class="nav__link">Автохимия</a></li>
+                <li class="nav__item"><a href="quality.html" class="nav__link">Качество</a></li>
+                <li class="nav__item"><a href="where.html" class="nav__link">Где купить</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
               </ul>
               <div class="header__mobile-lang desktop-hidden">
                 <a href="" class="header__lang">
@@ -96,6 +98,381 @@
     
     <!-- Item-->
     <main role="main" class="main">
+        
+        <section class="category">
+          <div class="container">
+            <div class="row category__wrapper">
+              <div class="col-md-6">
+                <img src="assets/img/ctg-01.png" alt="" class="category__img">
+              </div>
+              <div class="col-md-6">
+                <h1 class="category__title" data-label="Наименование">Рулевые наконечники</h1>
+                <p class="category__text">Рулевые тяги являются промежуточной частью рулевого управления автомобиля. Рулевые тяги Schatz сконструированы таким образом, чтобы сохранять стабильную передачу усилия от рулевого механизма на рычаги поворотных кулаков.</p>
+                <p class="category__text">Применение наших рулевых тяг позволит вам удерживать выбранный угол поворота колеса при маневрировании, а также обеспечит правильную работу рулевого привода в целом.</p>
+                <p class="category__text">Для обеспечения прочности и долговечности применяется полная обработка поверхности в соответствии с производственной технологией.</p>
+                <ul class="list">
+                  <li>Высокоточный класс полировки элементов</li>
+                  <li>Высокоэффективная смазка длительного срока службы</li>
+                  <li>Многослойное антикоррозионное покрытие</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="advantages">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 advantages__item">
+                <svg width="99" height="113" class="advantages__icon">
+                  <use xlink:href="assets/img/sprite.svg#icon-adv-01"></use>
+                </svg>
+                <p class="advantages__caption">Надежность
+                  и долговечность</p>
+                <p class="advantages__description">Рассчитаны на длительный срок службы деталей</p>
+              </div>
+              <div class="col-md-3 advantages__item">
+                <svg width="85" height="113" class="advantages__icon">
+                  <use xlink:href="assets/img/sprite.svg#icon-adv-02"></use>
+                </svg>
+                <p class="advantages__caption">Оригинальное
+                  соответсвие</p>
+                <p class="advantages__description">Полное соответствие
+                  ОЕМ-спецификациям</p>
+              </div>
+              <div class="col-md-3 advantages__item">
+                <svg width="123" height="113" class="advantages__icon">
+                  <use xlink:href="assets/img/sprite.svg#icon-adv-03"></use>
+                </svg>
+                <p class="advantages__caption">Максимальная
+                  безопасность</p>
+                <p class="advantages__description">Гарантия безопасного вождение и эксплуатации</p>
+              </div>
+              <div class="col-md-3 advantages__item">
+                <svg width="81" height="113" class="advantages__icon">
+                  <use xlink:href="assets/img/sprite.svg#icon-adv-04"></use>
+                </svg>
+                <p class="advantages__caption">Абсолютная
+                  эффективность</p>
+                <p class="advantages__description">Доказательства своей выгодности для клиента</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="search">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 p-0 p-sm-3">
+                <form action="" class="search__form">
+                  <div class="search__group">
+                    <p class="search__caption desktop-hidden">Поиск по номеру детали</p>
+                    <input class="search__input" type="text" name="article" id="article"
+                           placeholder="OEM, артикул Schatz, аналог...">
+                    <p class="search__caption mobile-hidden">Поиск по номеру детали</p>
+                  </div>
+                  <div class="search__group search__group_right">
+                    <p class="search__caption search__caption_right desktop-hidden">Поиск по характеристикам автомобиля</p>
+                  <select class="search__select" name="mark" id="mark">
+                    <option value="mark" selected>Марка</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                    <option value="value3">value3</option>
+                    <option value="value4">value4</option>
+                    <option value="value5">value5</option>
+                    <option value="value6">value6</option>
+                  </select>
+                  <select class="search__select" name="model" id="model" disabled>
+                    <option value="model" selected>Модель</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                    <option value="value3">value3</option>
+                    <option value="value4">value4</option>
+                    <option value="value5">value5</option>
+                    <option value="value6">value6</option>
+                  </select>
+                  <select class="search__select" name="year" id="year" disabled>
+                    <option value="year" selected>Год</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                    <option value="value3">value3</option>
+                    <option value="value4">value4</option>
+                    <option value="value5">value5</option>
+                    <option value="value6">value6</option>
+                  </select>
+                  <select class="search__select" name="carcase" id="carcase" disabled>
+                    <option value="carcase" selected>Кузов</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                    <option value="value3">value3</option>
+                    <option value="value4">value4</option>
+                    <option value="value5">value5</option>
+                    <option value="value6">value6</option>
+                  </select>
+                  <select class="search__select" name="product-group" id="product-group" disabled>
+                    <option value="product-group" selected>Товарная группа</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                    <option value="value3">value3</option>
+                    <option value="value4">value4</option>
+                    <option value="value5">value5</option>
+                    <option value="value6">value6</option>
+                  </select>
+                    <p class="search__caption search__caption_right mobile-hidden">Поиск по характеристикам автомобиля</p>
+                    <button class="btn btn-reset search__btn">Поиск</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <section class="product-list">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mb-5">
+                  <div class="product-list__heading">
+                    <div class="product-list__caption">
+                      Изображение
+                    </div>
+                    <div class="product-list__caption">
+                      Артикул
+                    </div>
+                    <div class="product-list__caption">
+                      Наименование
+                    </div>
+                    <div class="product-list__caption">
+                      Марка
+                    </div>
+                    <div class="product-list__caption">
+                      Модель
+                    </div>
+                    <div class="product-list__caption">
+                      Год и кузов
+                    </div>
+                    <div class="product-list__caption">
+                      ОЕМ код
+                    </div>
+                  </div>
+                <div class="product-list__wrapper">
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01
+                      53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01
+                      53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                  <div class="product-list__item">
+                    <img src="assets/img/pr-01.jpg" alt="" class="product-list__img">
+                    <p class="product-list__properties" data-label="Артикул">R-255</p>
+                    <p class="product-list__properties" data-label="Наименование">Рулевые наконечники</p>
+                    <p class="product-list__properties" data-label="Марка">ACURA</p>
+                    <p class="product-list__properties" data-label="Модель">MDX</p>
+                    <p class="product-list__properties" data-label="Год и кузов">2014-2020 & YD3</p>
+                    <p class="product-list__properties" data-label="ОЕМ код">53540TZ5A01</p>
+                    <a href="card.html" class="lnk"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="product-list__how">
+                  <span>Показывать по</span>
+                  <select name="how" id="how">
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                  </select>
+                  <span>товаров</span>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <ul class="product-list__pagination pagination">
+                  <li class="pagination__item pagination__item_first">
+                    <a href="" class="pagination__link">
+                      <svg width="20" height="17">
+                        <use xlink:href="assets/img/sprite.svg#icon-pagination-left"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="pagination__item"><a href="" class="pagination__link">1</a></li>
+                  <li class="pagination__item"><a href="" class="pagination__link">2</a></li>
+                  <li class="pagination__item"><a href="" class="pagination__link">3</a></li>
+                  <li class="pagination__item"><a href="" class="pagination__link">4</a></li>
+                  <li class="pagination__item"><a href="" class="pagination__link">5</a></li>
+                  <li class="pagination__item"><a href="" class="pagination__link">...</a></li>
+        
+                  <li class="pagination__item"><a href="" class="pagination__link">256</a></li>
+                  <li class="pagination__item pagination__item_last">
+                    <a href="" class="pagination__link">
+                      <svg width="20" height="17">
+                        <use xlink:href="assets/img/sprite.svg#icon-pagination-right"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <div class="section news-slider">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="title-h2 news-slider__title">Следите за нашими новостями</h2>
+                <div class="swiper js-news-slider news-slider__swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide news__slider__item">
+                      <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
+                      <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
+                      <a href="news.html" class="lnk"></a>
+                    </div>
+                    <div class="swiper-slide news__slider__item">
+                      <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
+                      <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
+                      <a href="news.html" class="lnk"></a>
+                    </div>
+                    <div class="swiper-slide news__slider__item">
+                      <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
+                      <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
+                      <a href="news.html" class="lnk"></a>
+                    </div>
+                    <div class="swiper-slide news__slider__item">
+                      <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
+                      <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
+                      <a href="news.html" class="lnk"></a>
+                    </div>
+                    <div class="swiper-slide news__slider__item">
+                      <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
+                      <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
+                      <a href="news.html" class="lnk"></a>
+                    </div>
+                    <div class="swiper-slide news__slider__item">
+                      <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
+                      <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
+                      <a href="news.html" class="lnk"></a>
+                    </div>
+                    <div class="swiper-slide news__slider__item">
+                      <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
+                      <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
+                      <a href="news.html" class="lnk"></a>
+                    </div>
+                    <div class="swiper-slide news__slider__item">
+                      <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
+                      <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
+                      <a href="news.html" class="lnk"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-slider__nav-btn swiper-button-prev-news slider-navigation__btn slider-navigation__btn_prev">
+                  <svg width="50" height="28">
+                    <use xlink:href="assets/img/sprite.svg#slider-arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="news-slider__nav-btn swiper-button-next-news slider-navigation__btn slider-navigation__btn_next">
+                  <svg width="50" height="28">
+                    <use xlink:href="assets/img/sprite.svg#slider-arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
     </main>
     <div class="js-stop-header"></div>

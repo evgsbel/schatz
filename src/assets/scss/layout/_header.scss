@@ -48,9 +48,10 @@
   }
   &__logo  {
     svg {
-        width: auto;
+
         max-width: 250px;
       @include r(1024) {
+        width: auto;
         max-width: 200px;
       }
     }
@@ -86,10 +87,7 @@
     align-items: center;
     gap: 0 25px;
     width: 100%;
-    @include r(1280) {
-      gap: 0;
-      justify-content: space-between;
-    }
+
     @include r(1024) {
       flex-direction: column;
       justify-content: flex-start;

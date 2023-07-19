@@ -147,4 +147,41 @@ img {
   }
 }
 
+.list {
+  font-size: 20px;
+  font-weight: 500;
+  li {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      background-color: $orange;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
 
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0 25px;
+  @include r(480) {
+    gap: 0 15px;
+  }
+  &__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    @include r(480) {
+      font-size: 16px;
+    }
+  }
+}
