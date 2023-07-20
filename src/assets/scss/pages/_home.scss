@@ -30,6 +30,12 @@
 
 .news-slider {
   margin-bottom: 80px;
+  &__title {
+    @include r(1024) {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+  }
   &__item {
     position: relative;
   }
@@ -39,9 +45,11 @@
     width: 100%;
   }
   &__caption {
+    margin: 0 auto;
     font-weight: 700;
     font-size: 26px;
     text-align: center;
+    max-width: 80%;
     @include r(768) {
       font-size: 18px;
     }
@@ -75,7 +83,7 @@
   }
   p {
     margin-bottom: 35px;
-    font-size: 28px;
+    font-size: 20px;
     @include r(576) {
       font-size: 18px;
     }
@@ -111,7 +119,7 @@
   &__brand-img {
     @include r(1024) {
       display: block;
-      margin: 0 auto 20px;
+      margin: 0 auto 40px;
     }
   }
   &__img {

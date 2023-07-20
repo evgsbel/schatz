@@ -35,6 +35,7 @@
     
             <nav class="nav header__nav js-mobile-menu">
               <ul class="nav__list">
+                <li class="nav__item"><a href="about.html" class="nav__link">О бренде</a></li>
                 <li class="nav__item collapsed sub-item desktop-hidden">
                   <a href="catalog.html" data-toggle="collapse" data-target="#collapseOne" class="nav__link">Автозапчасти</a>
                   <ul class="sub-menu collapse" id="collapseOne" data-parent="">
@@ -64,7 +65,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav__item is-active mobile-hidden">
+                <li class="nav__item mobile-hidden">
                   <a href="catalog.html" class="nav__link ">Автозапчасти</a>
                 </li>
                 <li class="nav__item"><a href="aerosol-category.html" class="nav__link">Автохимия</a></li>
@@ -106,7 +107,8 @@
                 <h1 class="title-h1 hero__title">Совершенство каждой детали</h1>
                 <p class="hero__subtitle">Бескомпромиссное премиальное качество продукции
                   для&nbsp;самых&nbsp;требовательных автомобилистов</p>
-                <a href="catalog.html" class="btn btn-reset hero__btn">Посмотреть ассортимент</a>
+                <a href="catalog.html" class="btn btn-reset hero__btn mobile-hidden">Посмотреть ассортимент</a>
+                <a href="catalog.html" class="btn btn-reset hero__btn desktop-hidden">В каталог</a>
               </div>
             </div>
           </div>
@@ -122,6 +124,7 @@
                       <input class="search__input" type="text" name="article" id="article"
                              placeholder="OEM, артикул Schatz, аналог...">
                       <p class="search__caption mobile-hidden">Поиск по номеру детали</p>
+                      <button class="btn btn-reset search__btn desktop-hidden mb-4">Поиск</button>
                     </div>
                     <div class="search__group search__group_right">
                       <p class="search__caption search__caption_right desktop-hidden">Поиск по характеристикам автомобиля</p>
@@ -182,7 +185,7 @@
         <section class="advantages">
           <div class="container">
             <div class="row">
-              <div class="col-md-3 advantages__item">
+              <div class="col-6 col-md-3 advantages__item">
                 <svg width="99" height="113" class="advantages__icon">
                   <use xlink:href="assets/img/sprite.svg#icon-adv-01"></use>
                 </svg>
@@ -190,7 +193,7 @@
                   и долговечность</p>
                 <p class="advantages__description">Рассчитаны на длительный срок службы деталей</p>
               </div>
-              <div class="col-md-3 advantages__item">
+              <div class="col-6 col-md-3 advantages__item">
                 <svg width="85" height="113" class="advantages__icon">
                   <use xlink:href="assets/img/sprite.svg#icon-adv-02"></use>
                 </svg>
@@ -199,7 +202,7 @@
                 <p class="advantages__description">Полное соответствие
                   ОЕМ-спецификациям</p>
               </div>
-              <div class="col-md-3 advantages__item">
+              <div class="col-6 col-md-3 advantages__item">
                 <svg width="123" height="113" class="advantages__icon">
                   <use xlink:href="assets/img/sprite.svg#icon-adv-03"></use>
                 </svg>
@@ -207,7 +210,7 @@
                   безопасность</p>
                 <p class="advantages__description">Гарантия безопасного вождение и эксплуатации</p>
               </div>
-              <div class="col-md-3 advantages__item">
+              <div class="col-6 col-md-3 advantages__item">
                 <svg width="81" height="113" class="advantages__icon">
                   <use xlink:href="assets/img/sprite.svg#icon-adv-04"></use>
                 </svg>
@@ -221,8 +224,11 @@
         <div class="section news-slider category-slider">
           <div class="container">
             <div class="row">
-              <div class="col-12">
-                <h2 class="title-h2 news-slider__title">Товарные группы</h2>
+              <div class="col-10 col-lg-12 offset-1 offset-lg-0">
+                <h2 class="title-h2 news-slider__title mobile-hidden">Товарные группы</h2>
+                <h2 class="title-h2 news-slider__title desktop-hidden">На сегодняшний день
+                  в ассортименте продукции более 2 000 артикулов
+                  в 2 товарных группах</h2>
                 <div class="swiper js-category-slider news-slider__swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide news__slider__item">
@@ -306,7 +312,7 @@
               <div class="col-lg-2">
                 <img src="assets/img/logo-3.png" alt="" class="about__brand-img">
               </div>
-              <div class="col-lg-9">
+              <div class="offset-lg-1 col-lg-8">
                 <p class="about__caption">О Бренде Schatz</p>
                 <p class="about__description"><b>Schatz</b> <i>(перевод с немецкого der Schätz — сокровище)</i> - бренд
                   премиальных автозапчастей для современных автомобилей в сегменте подвески, тормозной системы и рулевого
@@ -323,12 +329,12 @@
               <div class="  col-md-6 p-0 pr-sm-3 pl-sm-3">
                 <img src="assets/img/srv-01.jpg" alt="" class="service__img">
               </div>
-              <div class="col-md-6 service__item order-1 order-md-0">
+              <div class="col-md-5 service__item order-1 order-md-0">
                 <p class="service__caption">Производство</p>
                 <p class="service__description">Только самые современные производственные мощности и совершенные технологичные
                   заводские линии задействованы при производстве автокомпонентов Schatz.</p>
               </div>
-              <div class="col-md-6 service__item order-3 order-md-0">
+              <div class="col-md-5 service__item order-3 order-md-0">
                 <p class="service__caption">ОЕМ соответствие</p>
                 <p class="service__description">Каждая делать производится в четком соответствии спецификациям мировых
                   автоконцернов и полностью совместима со всеми системами автомобиля.</p>
@@ -339,7 +345,7 @@
               <div class="col-md-6 order-4 order-md-0 p-0 pr-sm-3 pl-sm-3">
                 <img src="assets/img/srv-03.jpg" alt="" class="service__img">
               </div>
-              <div class="col-md-6 service__item order-5 order-md-0">
+              <div class="col-md-5 service__item order-5 order-md-0">
                 <p class="service__caption">Логистика и хранение</p>
                 <p class="service__description">Складские мощности и проработанные транспортные маршруты позволяют четко, точно
                   в срок осуществлять поставки продукции партнерам и клиентам.</p>
@@ -350,7 +356,7 @@
         <div class="section news-slider">
           <div class="container">
             <div class="row">
-              <div class="col-12">
+              <div class="col-10 col-lg-12 offset-1 offset-lg-0">
                 <h2 class="title-h2 news-slider__title">Следите за нашими новостями</h2>
                 <div class="swiper js-news-slider news-slider__swiper">
                   <div class="swiper-wrapper">

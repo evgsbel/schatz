@@ -81,6 +81,11 @@
       margin-bottom: 20px;
       height: auto;
     }
+    @include r(576) {
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+    }
     &_right {
       width: calc(100% - 250px);
       @include r(1024) {
@@ -90,7 +95,7 @@
   }
   &__btn {
     font-size: 24px;
-    width: 243px;
+    width: 224px;
     height: 48px;
     @include r(576) {
       width: 100%;

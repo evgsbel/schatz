@@ -123,6 +123,12 @@ img {
       @include r(1280) {
         left: 0;
       }
+      @include r(1024) {
+        left: -50px;
+      }
+       @include r(480) {
+        left: -30px;
+      }
     }
     &_next {
       right: -50px;
@@ -131,6 +137,12 @@ img {
       }
       @include r(1280) {
         right: 0;
+      }
+      @include r(1024) {
+        right: -50px;
+      }
+      @include r(480) {
+        right: -30px;
       }
     }
   }

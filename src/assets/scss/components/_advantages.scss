@@ -16,9 +16,14 @@
     margin-bottom: 15px;
     font-weight: 700;
     font-size: 23px;
-
+    @include r(768) {
+      font-size: 16px;
+    }
   }
   &__description {
     font-size: 18px;
+    @include r(768) {
+      font-size: 16px;
+    }
   }
 }

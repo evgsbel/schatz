@@ -14,11 +14,17 @@
     margin-bottom: 30px;
     margin-left: 65px;
     font-weight: 500;
+     @include r(1024) {
+      font-size: 18px;
+    }
   }
   &__copy {
     display: block;
     margin-left: 65px;
     font-weight: 500;
+     @include r(1024) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -31,6 +37,9 @@
     width: max-content;
     font-weight: 500;
     line-height: 32px;
+    @include r(1024) {
+      font-size: 18px;
+    }
     &::before {
       content: '';
       position: absolute;
