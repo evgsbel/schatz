@@ -496,3 +496,133 @@
     }
   }
 }
+
+.content {
+  p {
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.2;
+    @include r(576) {
+      font-size: 16px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  b {
+    font-weight: 700;
+  }
+  &__bdr {
+    padding-left: 28px;
+    border-left: 17px solid $orange;
+    font-size: 24px;
+    @include r(768) {
+      padding-left: 0;
+      font-size: 18px;
+      border-left: none;
+    }
+  }
+}
+.hero-inner {
+  margin-bottom: 106px;
+  @include r(768) {
+    margin-bottom: 40px;
+  }
+}
+.about-content {
+  margin-bottom: 30px;
+  &__hero {
+    background-image: url('../img/hero-02.png');
+    @include r(768) {
+      background-image: url('../img/hero-02-mobile.png');
+    }
+  }
+
+  &__brand {
+    margin-bottom: 33px;
+  }
+  &__brand-logo {
+    display: block;
+    margin: 0 auto;
+    @include r(576) {
+      max-width: 215px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.inner-orange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 15px;
+  margin-bottom: 95px;
+  @include r(768) {
+    flex-direction: column;
+    gap: 28px 0;
+  }
+  &__btn {
+    width: 497px;
+    max-width: 100%;
+    height: 55px;
+    @include r(768) {
+      width: 261px;
+      height: 61px;
+      font-size: 18px;
+    }
+  }
+}
+
+
+.quality {
+  &__hero {
+    background-image: url('../img/hero-03.png');
+    @include r(768) {
+      background-image: url('../img/hero-03-mobile.png');
+    }
+  }
+  &__title {
+    margin-bottom: 55px;
+  }
+  p {
+    font-size: 22px;
+    @include r(768) {
+      font-size: 16px;
+    }
+  }
+  .content__bdr {
+    margin-bottom: 125px;
+  }
+  .service__description {
+    font-size: 24px;
+    @include r(768) {
+      font-size: 18px;
+    }
+  }
+}
+
+
+.warranty {
+  &__hero {
+    background-image: url('../img/hero-04.png');
+    @include r(768) {
+      background-image: url('../img/hero-04-mobile.png');
+    }
+  }
+  p {
+    font-size: 22px;
+    @include r(768) {
+      font-size: 16px;
+    }
+  }
+  .service__description {
+    font-size: 24px;
+    @include r(768) {
+      font-size: 18px;
+    }
+  }
+  &__group {
+    margin-bottom: 66px;
+  }
+}

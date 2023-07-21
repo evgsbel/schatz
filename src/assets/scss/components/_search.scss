@@ -1,5 +1,7 @@
 .search {
-
+  &__title {
+    margin-bottom: 33px;
+  }
   &__form {
     display: flex;
     align-items: center;

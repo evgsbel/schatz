@@ -73,6 +73,9 @@ img {
   border: 2px solid $orange;
   border-radius: 10px;
   transition: background-color $trns, color $trns;
+  @include r(768) {
+    font-size: 20px;
+  }
   &:focus,
   &:active {
     outline: none;

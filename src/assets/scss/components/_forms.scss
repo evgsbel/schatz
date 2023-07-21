@@ -1,0 +1,66 @@
+.form {
+  margin: 0 auto;
+  width: 925px;
+  max-width: 100%;
+  &__label {
+    position: relative;
+    margin-bottom: 66px;
+    width: 100%;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &_email {
+      margin-bottom: 96px;
+    }
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 300;
+    &::placeholder {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+    }
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: $orange;
+    }
+  }
+  &__textarea {
+    margin-bottom: 84px;
+    height: 30px;
+    resize: none;
+    &:focus ~ .placeholder {
+      transform: scale(0.8) translateY(-190px);
+      transform-origin: left center;
+      opacity: 1;
+    }
+  }
+  &__submit {
+    margin: 0 auto;
+    width: 244px;
+    height: 49px;
+  }
+}
+
+.form-partners {
+  margin-bottom: 126px;
+  &__title {
+    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+  }
+  &__subtitle {
+    margin-bottom: 60px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+  }
+}

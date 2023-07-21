@@ -1,6 +1,7 @@
 .header {
   padding: 40px 0;
   background-color: #fff;
+  box-shadow: 0px 22px 19px 0px rgba(0,0,0, 0.7);
   &_fixed {
     position: fixed;
     top: 0;
@@ -252,3 +253,5 @@
     }
   }
 }
+
+
