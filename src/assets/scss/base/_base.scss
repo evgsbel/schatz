@@ -165,6 +165,9 @@ img {
 .list {
   font-size: 20px;
   font-weight: 500;
+  @include r(768) {
+    font-size: 16px;
+  }
   li {
     position: relative;
     margin-bottom: 30px;
@@ -197,6 +200,29 @@ img {
     line-height: 1;
     @include r(480) {
       font-size: 16px;
+    }
+  }
+}
+
+.read-more {
+  svg {
+    width: 22px;
+    height: 17px;
+    transition: transform $trns;
+    @include r(576) {
+      width: 15px;
+    }
+  }
+  &.is-open svg {
+    transform: rotate(180deg);
+  }
+  &__hidden {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $trns;
+    &.is-open {
+      max-height: 300px;
     }
   }
 }

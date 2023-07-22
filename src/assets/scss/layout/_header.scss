@@ -22,6 +22,7 @@
     background-color: #d9d9d9;
     font-weight: 700;
     font-size: 12px;
+    text-transform: uppercase;
     color: #fff;
     border-radius: 50%;
     border: 1px solid #d9d9d9;
@@ -49,12 +50,15 @@
   }
   &__logo  {
     svg {
-
-        max-width: 250px;
+      display: block;
+      max-width: 250px;
       @include r(1024) {
         width: auto;
         max-width: 200px;
       }
+    }
+    img {
+      display: none;
     }
   }
 }
@@ -255,3 +259,30 @@
 }
 
 
+.is-aerosol-category-page,
+.is-aerosol-card-page {
+  .header {
+    background-color: #000;
+  }
+  .header__lang {
+    background-color: #fff;
+    color: #000;
+  }
+  .nav__item {
+    color: #fff;
+  }
+  .header__logo svg {
+    display: none;
+  }
+  .logo img {
+    display: block;
+  }
+  .burger__lines i {
+    background-color: #fff;
+  }
+  .nav {
+    @include r(1024) {
+      background-color: #000;
+    }
+  }
+}

@@ -11825,6 +11825,11 @@ img {
   font-size: 20px;
   font-weight: 500;
 }
+@media only screen and (max-width: 768px) {
+  .list {
+    font-size: 16px;
+  }
+}
 .list li {
   position: relative;
   margin-bottom: 30px;
@@ -11866,6 +11871,34 @@ img {
   .pagination__item {
     font-size: 16px;
   }
+}
+
+.read-more svg {
+  width: 22px;
+  height: 17px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+@media only screen and (max-width: 576px) {
+  .read-more svg {
+    width: 15px;
+  }
+}
+.read-more.is-open svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.read-more__hidden {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
+}
+.read-more__hidden.is-open {
+  max-height: 300px;
 }
 
 @font-face {
@@ -12048,6 +12081,7 @@ ul {
   background-color: #d9d9d9;
   font-weight: 700;
   font-size: 12px;
+  text-transform: uppercase;
   color: #fff;
   border-radius: 50%;
   border: 1px solid #d9d9d9;
@@ -12082,6 +12116,7 @@ ul {
   }
 }
 .header__logo svg {
+  display: block;
   max-width: 250px;
 }
 @media only screen and (max-width: 1024px) {
@@ -12089,6 +12124,9 @@ ul {
     width: auto;
     max-width: 200px;
   }
+}
+.header__logo img {
+  display: none;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -12313,6 +12351,38 @@ ul {
   transform-origin: left center;
 }
 
+.is-aerosol-category-page .header,
+.is-aerosol-card-page .header {
+  background-color: #000;
+}
+.is-aerosol-category-page .header__lang,
+.is-aerosol-card-page .header__lang {
+  background-color: #fff;
+  color: #000;
+}
+.is-aerosol-category-page .nav__item,
+.is-aerosol-card-page .nav__item {
+  color: #fff;
+}
+.is-aerosol-category-page .header__logo svg,
+.is-aerosol-card-page .header__logo svg {
+  display: none;
+}
+.is-aerosol-category-page .logo img,
+.is-aerosol-card-page .logo img {
+  display: block;
+}
+.is-aerosol-category-page .burger__lines i,
+.is-aerosol-card-page .burger__lines i {
+  background-color: #fff;
+}
+@media only screen and (max-width: 1024px) {
+  .is-aerosol-category-page .nav,
+  .is-aerosol-card-page .nav {
+    background-color: #000;
+  }
+}
+
 .footer {
   padding-top: 50px;
   padding-bottom: 150px;
@@ -12324,6 +12394,9 @@ ul {
 .footer__logo {
   display: block;
   margin-bottom: 20px;
+}
+.footer__logo img {
+  display: none;
 }
 .footer__link {
   display: block;
@@ -12378,6 +12451,35 @@ ul {
 }
 .footer-nav__item.is-active::before, .footer-nav__item:hover::before {
   width: 100%;
+}
+
+.is-aerosol-category-page .footer,
+.is-aerosol-card-page .footer {
+  background-color: #000;
+  background-image: url("../img/footer-bg-2.png");
+}
+@media only screen and (max-width: 576px) {
+  .is-aerosol-category-page .footer,
+  .is-aerosol-card-page .footer {
+    background-image: url("../img/footer-bg-2-mobile.png");
+    background-size: cover;
+  }
+}
+.is-aerosol-category-page .footer-nav__item,
+.is-aerosol-category-page .footer__copy,
+.is-aerosol-category-page .footer__link,
+.is-aerosol-card-page .footer-nav__item,
+.is-aerosol-card-page .footer__copy,
+.is-aerosol-card-page .footer__link {
+  color: #fff;
+}
+.is-aerosol-category-page .footer__logo svg,
+.is-aerosol-card-page .footer__logo svg {
+  display: none;
+}
+.is-aerosol-category-page .footer__logo img,
+.is-aerosol-card-page .footer__logo img {
+  display: block;
 }
 
 .form {
@@ -12667,11 +12769,13 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  height: 630px;
+  height: 618px;
 }
 @media only screen and (max-width: 768px) {
   .hero {
+    padding-top: 30px;
     background-image: url("../img/hero-bg-mobile.png");
+    height: 400px;
   }
 }
 .hero__title {
@@ -12687,11 +12791,18 @@ ul {
 @media only screen and (max-width: 576px) {
   .hero__subtitle {
     font-size: 18px;
+    margin-bottom: 30px;
   }
 }
 .hero__btn {
   width: 388px;
   margin: 0 auto;
+}
+@media only screen and (max-width: 576px) {
+  .hero__btn {
+    width: 192px;
+    height: 54px;
+  }
 }
 
 .news-slider {
@@ -12713,10 +12824,9 @@ ul {
 }
 .news-slider__caption {
   margin: 0 auto;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 26px;
   text-align: center;
-  max-width: 80%;
 }
 @media only screen and (max-width: 768px) {
   .news-slider__caption {
@@ -12731,6 +12841,10 @@ ul {
   .category-slider {
     margin-bottom: 60px;
   }
+}
+.category-slider .news-slider__caption {
+  font-weight: 700;
+  max-width: 80%;
 }
 
 .about {
@@ -12827,6 +12941,7 @@ ul {
 @media only screen and (max-width: 768px) {
   .service__caption {
     text-align: center;
+    font-size: 22px;
   }
 }
 .service__description {
@@ -12836,6 +12951,7 @@ ul {
 @media only screen and (max-width: 576px) {
   .service__description {
     font-size: 18px;
+    padding: 0 15px;
   }
 }
 .service__img {
@@ -12891,6 +13007,7 @@ ul {
 }
 
 .catalog {
+  margin-top: 90px;
   margin-bottom: 140px;
 }
 .catalog__row {
@@ -12909,6 +13026,9 @@ ul {
   margin: 0 auto;
 }
 
+.category {
+  margin-top: 90px;
+}
 .category__wrapper {
   margin-bottom: 45px;
 }
@@ -12923,7 +13043,9 @@ ul {
 }
 @media only screen and (max-width: 768px) {
   .category__title {
-    margin-top: 20px;
+    margin-top: 70px;
+    font-size: 18px;
+    padding: 0 15px;
   }
 }
 .category__text {
@@ -12933,6 +13055,12 @@ ul {
 }
 .category__text:last-child {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 576px) {
+  .category__text {
+    padding: 0 15px;
+    font-size: 16px;
+  }
 }
 
 .product-list {
@@ -13106,6 +13234,7 @@ ul {
 }
 
 .product {
+  margin-top: 90px;
   margin-bottom: 65px;
 }
 .product__img {
@@ -13222,10 +13351,21 @@ ul {
 }
 .product__property span {
   font-weight: 300;
+  font-size: 18px;
+}
+@media only screen and (max-width: 576px) {
+  .product__property span {
+    font-size: 12px;
+  }
 }
 .product__btn {
   width: 290px;
   height: 45px;
+}
+@media only screen and (max-width: 768px) {
+  .product__btn {
+    margin: 0 auto;
+  }
 }
 
 .auto-list {
@@ -13384,6 +13524,9 @@ ul {
   .quality__hero {
     background-image: url("../img/hero-03-mobile.png");
   }
+  .quality__hero .btn {
+    width: 270px;
+  }
 }
 .quality__title {
   margin-bottom: 55px;
@@ -13415,6 +13558,9 @@ ul {
   .warranty__hero {
     background-image: url("../img/hero-04-mobile.png");
   }
+  .warranty__hero .btn {
+    width: 270px;
+  }
 }
 .warranty p {
   font-size: 22px;
@@ -13434,6 +13580,271 @@ ul {
 }
 .warranty__group {
   margin-bottom: 66px;
+}
+
+.aerosol-hero {
+  padding-top: 36px;
+  background-image: url("../img/aerosol-hero-bg.png");
+  background-color: #000;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 768px) {
+  .aerosol-hero {
+    background-image: url("../img/aerosol-hero-bg-mobile.png");
+    background-size: contain;
+  }
+}
+.aerosol-hero__title {
+  margin-bottom: 56px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .aerosol-hero__title {
+    margin-bottom: 90px;
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .aerosol-hero__title {
+    font-size: 18px;
+  }
+}
+
+.aerosol-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .aerosol-product {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.aerosol-product__item {
+  position: relative;
+  text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+  .aerosol-product__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3%;
+            flex: 0 0 33.3%;
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .aerosol-product__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+.aerosol-product__item_one, .aerosol-product__item_eight {
+  font-size: 10px;
+}
+.aerosol-product__item_two, .aerosol-product__item_seven {
+  font-size: 14px;
+}
+.aerosol-product__item_three, .aerosol-product__item_six {
+  font-size: 18px;
+}
+.aerosol-product__item_four, .aerosol-product__item_five {
+  font-size: 20px;
+}
+.aerosol-product__item:hover * {
+  opacity: 1;
+}
+.aerosol-product__caption {
+  margin-bottom: 16px;
+  color: #fff;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+@media only screen and (max-width: 1024px) {
+  .aerosol-product__caption {
+    font-size: 16px;
+    opacity: 1;
+    max-width: 150px;
+    margin: 0 auto 16px;
+  }
+}
+.aerosol-product__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  background-color: #ec8020;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  width: 107px;
+  height: 30px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+@media only screen and (max-width: 1024px) {
+  .aerosol-product__btn {
+    opacity: 1;
+    font-size: 10px;
+  }
+}
+.aerosol-product__btn:hover {
+  color: #fff;
+}
+
+.aerosol-content {
+  padding-top: 150px;
+  padding-bottom: 200px;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+}
+@media only screen and (max-width: 576px) {
+  .aerosol-content {
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
+.aerosol-content p {
+  margin-bottom: 30px;
+}
+.aerosol-content p:last-child {
+  margin-bottom: 0;
+}
+.aerosol-content b {
+  font-weight: 700;
+}
+.aerosol-content i {
+  font-style: italic;
+}
+.aerosol-content img {
+  display: block;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 576px) {
+  .aerosol-content img {
+    margin-bottom: 40px;
+  }
+}
+
+.aerosol-card {
+  padding: 90px 0 120px;
+}
+.aerosol-card__img {
+  display: block;
+  margin: 0 auto 62px;
+}
+@media only screen and (max-width: 576px) {
+  .aerosol-card__img {
+    margin-bottom: 26px;
+  }
+}
+.aerosol-card__btn {
+  width: 201px;
+  height: 45px;
+  margin: 0 auto 50px;
+}
+.aerosol-card__title {
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.aerosol-card__article {
+  color: #ec8020;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.aerosol-card__group {
+  margin-bottom: 35px;
+}
+.aerosol-card__group:last-child {
+  margin-bottom: 0;
+}
+.aerosol-card__group_warning {
+  padding: 19px 16px;
+  border-radius: 10px;
+  border: 2px solid #ec8020;
+}
+.aerosol-card p:not(.aerosol-card__article) {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 576px) {
+  .aerosol-card p:not(.aerosol-card__article) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+.aerosol-card p:not(.aerosol-card__article):last-child {
+  margin-bottom: 0;
+}
+
+.contacts {
+  margin-top: 90px;
+  margin-bottom: 130px;
+  text-align: center;
+}
+.contacts__logo {
+  display: block;
+  margin: 0 auto 40px;
+}
+.contacts__description {
+  margin-bottom: 54px;
+  line-height: 34px;
+}
+.contacts p {
+  font-size: 24px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 768px) {
+  .contacts p {
+    font-size: 18px;
+  }
+}
+.contacts__site {
+  display: block;
+  margin-bottom: 36px;
+  text-decoration: underline;
+  font-size: 24px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 768px) {
+  .contacts__site {
+    font-size: 18px;
+  }
+}
+.contacts__phone {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .contacts__phone {
+    font-size: 18px;
+  }
+}
+
+.map {
+  margin-bottom: 375px;
+  z-index: 200;
 }
 
 /*# sourceMappingURL=scss */

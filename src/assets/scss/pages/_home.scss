@@ -5,9 +5,11 @@
   -webkit-background-size: cover;
   background-size: cover;
   text-align: center;
-  height: 630px;
+  height: 618px;
   @include r(768) {
+    padding-top: 30px;
     background-image: url('../img/hero-bg-mobile.png');
+    height: 400px;
   }
  &__title {
    margin-bottom: 20px;
@@ -20,11 +22,16 @@
     line-height: 1.2;
     @include r(576) {
       font-size: 18px;
+      margin-bottom: 30px;
     }
   }
   &__btn {
     width: 388px;
     margin: 0 auto;
+    @include r(576) {
+      width: 192px;
+      height: 54px;
+    }
   }
 }
 
@@ -46,10 +53,9 @@
   }
   &__caption {
     margin: 0 auto;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 26px;
     text-align: center;
-    max-width: 80%;
     @include r(768) {
       font-size: 18px;
     }
@@ -59,6 +65,10 @@
   margin-bottom: 160px;
   @include r(576) {
     margin-bottom: 60px;
+  }
+  .news-slider__caption {
+    font-weight: 700;
+    max-width: 80%;
   }
 }
 
@@ -140,6 +150,7 @@
     font-weight: 700;
     @include r(768) {
       text-align: center;
+      font-size: 22px;
     }
   }
   &__description {
@@ -147,6 +158,7 @@
     font-weight: 300;
     @include r(576) {
       font-size: 18px;
+      padding: 0 15px;
     }
   }
   &__img {
@@ -193,6 +205,7 @@
 
 // catalog
 .catalog {
+  margin-top: 90px;
   margin-bottom: 140px;
   &__row {
   gap: 70px 0;
@@ -213,6 +226,7 @@
 
 //category
 .category {
+  margin-top: 90px;
   &__wrapper {
     margin-bottom: 45px;
   }
@@ -225,7 +239,9 @@
     font-weight: 700;
     line-height: 1.2;
     @include r(768) {
-      margin-top: 20px;
+      margin-top: 70px;
+      font-size: 18px;
+      padding: 0 15px;
     }
   }
   &__text {
@@ -234,6 +250,10 @@
     font-weight: 300;
     &:last-child {
       margin-bottom: 0;
+    }
+    @include r(576) {
+      padding: 0 15px;
+      font-size: 16px;
     }
   }
 }
@@ -362,6 +382,7 @@
 
 //product
 .product {
+  margin-top: 90px;
   margin-bottom: 65px;
   &__img {
     margin-bottom: 75px;
@@ -451,11 +472,18 @@
     }
     span {
       font-weight: 300;
+      font-size: 18px;
+      @include r(576) {
+        font-size: 12px;
+      }
     }
   }
   &__btn {
     width: 290px;
     height: 45px;
+    @include r(768) {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -580,6 +608,9 @@
     background-image: url('../img/hero-03.png');
     @include r(768) {
       background-image: url('../img/hero-03-mobile.png');
+      .btn {
+        width: 270px;
+      }
     }
   }
   &__title {
@@ -608,6 +639,9 @@
     background-image: url('../img/hero-04.png');
     @include r(768) {
       background-image: url('../img/hero-04-mobile.png');
+      .btn {
+        width: 270px;
+      }
     }
   }
   p {
@@ -625,4 +659,230 @@
   &__group {
     margin-bottom: 66px;
   }
+}
+
+.aerosol-hero {
+  padding-top: 36px;
+  background-image: url('../img/aerosol-hero-bg.png');
+  background-color: #000;
+  background-repeat: no-repeat;
+  @include r(768) {
+    background-image: url('../img/aerosol-hero-bg-mobile.png');
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+  &__title {
+    margin-bottom: 56px;
+    text-align: center;
+    @include r(768) {
+      margin-bottom: 90px;
+      font-size: 26px;
+    }
+    @include r(480) {
+      font-size: 18px;
+    }
+  }
+}
+
+.aerosol-product {
+    display: flex;
+    align-items: center;
+    @include r(1024) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  &__item {
+    position: relative;
+    text-align: center;
+    @include r(1024) {
+      flex: 0 0 33.3%;
+      margin-bottom: 60px;
+    }
+    @include r(576) {
+      flex: 0 0 50%;
+    }
+    &_one,
+    &_eight {
+      font-size: 10px;
+
+    }
+    &_two,
+    &_seven {
+      font-size: 14px;
+
+    }
+    &_three,
+    &_six {
+      font-size: 18px;
+    }
+    &_four,
+    &_five {
+      font-size: 20px;
+
+    }
+    &:hover {
+      * {
+        opacity: 1;
+      }
+    }
+  }
+  &__caption {
+    margin-bottom: 16px;
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity $trns;
+    @include r(1024) {
+      font-size: 16px;
+      opacity: 1;
+      max-width: 150px;
+      margin: 0 auto 16px;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: $orange;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    width: 107px;
+    height: 30px;
+    opacity: 0;
+    transition: opacity $trns;
+    @include r(1024) {
+      opacity: 1;
+      font-size: 10px;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.aerosol-content {
+  padding-top: 150px;
+  padding-bottom: 200px;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  @include r(576) {
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  p {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  b {
+    font-weight: 700;
+  }
+  i {
+    font-style: italic;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    @include r(576) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.aerosol-card {
+  padding: 90px 0 120px;
+  &__img {
+    display: block;
+    margin: 0 auto 62px;
+    @include r(576) {
+      margin-bottom: 26px;
+    }
+  }
+  &__btn {
+    width: 201px;
+    height: 45px;
+    margin: 0 auto 50px;
+  }
+  &__title {
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  &__article {
+    color:$orange;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__group {
+    margin-bottom: 35px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &_warning {
+      padding: 19px 16px;
+      border-radius: 10px;
+      border: 2px solid $orange;
+    }
+  }
+  p:not(.aerosol-card__article) {
+    font-size: 18px;
+    margin-bottom: 20px;
+    @include r(576) {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contacts {
+  margin-top: 90px;
+  margin-bottom: 130px;
+  text-align: center;
+  &__logo {
+    display: block;
+    margin: 0 auto 40px;
+  }
+  &__description {
+    margin-bottom: 54px;
+    line-height: 34px;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 300;
+    @include r(768) {
+      font-size: 18px;
+    }
+  }
+  &__site {
+    display: block;
+    margin-bottom: 36px;
+    text-decoration: underline;
+    font-size: 24px;
+    font-weight: 300;
+    @include r(768) {
+      font-size: 18px;
+    }
+  }
+  &__phone  {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    @include r(768) {
+      font-size: 18px;
+    }
+  }
+}
+
+.map {
+  margin-bottom: 375px;
+  z-index: 200;
 }

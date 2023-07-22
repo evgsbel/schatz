@@ -142,3 +142,13 @@ var swiperCategory = new Swiper(".js-category-slider", {
     }
   }
 });
+
+//read more
+$(function () {
+  var readMoreBtn = document.querySelector(".read-more");
+  var readMoreHide = document.querySelector(".read-more__hidden");
+  readMoreBtn.addEventListener('click', function (el) {
+    readMoreBtn.classList.toggle('is-open');
+    readMoreHide.classList.toggle('is-open');
+  });
+});
