@@ -221,6 +221,9 @@
     width: 200px;
     max-width: 100%;
     margin: 0 auto;
+    @include r(576) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -461,6 +464,12 @@
     display: flex;
     align-items: flex-start;
     gap: 0 30px;
+    @include r(576) {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     p {
       width: 50%;
       font-size: 20px;
@@ -565,6 +574,12 @@
     @include r(768) {
       background-image: url('../img/hero-02-mobile.png');
     }
+    h1 {
+      @include r(576) {
+        margin: 0 auto 30px;
+        max-width: 60%;
+      }
+    }
   }
 
   &__brand {
@@ -585,7 +600,7 @@
   justify-content: center;
   align-items: center;
   gap: 0 15px;
-  margin-bottom: 95px;
+  margin: 95px 0;
   @include r(768) {
     flex-direction: column;
     gap: 28px 0;
@@ -615,11 +630,13 @@
   }
   &__title {
     margin-bottom: 55px;
+    line-height: 1.2;
   }
   p {
     font-size: 22px;
     @include r(768) {
       font-size: 16px;
+      padding: 0 15px;
     }
   }
   .content__bdr {
@@ -666,6 +683,7 @@
   background-image: url('../img/aerosol-hero-bg.png');
   background-color: #000;
   background-repeat: no-repeat;
+  background-size: cover;
   @include r(768) {
     background-image: url('../img/aerosol-hero-bg-mobile.png');
     -webkit-background-size: contain;
@@ -735,6 +753,7 @@
       font-size: 16px;
       opacity: 1;
       max-width: 150px;
+      min-height: 40px;
       margin: 0 auto 16px;
     }
   }
@@ -852,7 +871,7 @@
     margin: 0 auto 40px;
   }
   &__description {
-    margin-bottom: 54px;
+    margin-bottom: 36px;
     line-height: 34px;
   }
   p {
@@ -883,6 +902,6 @@
 }
 
 .map {
-  margin-bottom: 375px;
+  margin-bottom: 80px;
   z-index: 200;
 }

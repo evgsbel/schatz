@@ -150,7 +150,11 @@ img {
     }
   }
 }
-
+.category-slider .slider-navigation__btn {
+  @include r(576) {
+    top: 60%;
+  }
+}
 .desktop-hidden {
   @include rmin(1024) {
     display: none;
@@ -167,6 +171,9 @@ img {
   font-weight: 500;
   @include r(768) {
     font-size: 16px;
+  }
+  @include r(576) {
+    padding: 0 15px;
   }
   li {
     position: relative;

@@ -11809,6 +11809,12 @@ img {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .category-slider .slider-navigation__btn {
+    top: 60%;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .desktop-hidden {
     display: none;
@@ -11828,6 +11834,11 @@ img {
 @media only screen and (max-width: 768px) {
   .list {
     font-size: 16px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .list {
+    padding: 0 15px;
   }
 }
 .list li {
@@ -12050,8 +12061,8 @@ ul {
 .header {
   padding: 40px 0;
   background-color: #fff;
-  -webkit-box-shadow: 0px 22px 19px 0px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 22px 19px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 22px 19px 0px #D9D9D9;
+          box-shadow: 0px 22px 19px 0px #D9D9D9;
 }
 .header_fixed {
   position: fixed;
@@ -13025,6 +13036,11 @@ ul {
   max-width: 100%;
   margin: 0 auto;
 }
+@media only screen and (max-width: 576px) {
+  .catalog__caption {
+    font-size: 16px;
+  }
+}
 
 .category {
   margin-top: 90px;
@@ -13338,6 +13354,14 @@ ul {
           align-items: flex-start;
   gap: 0 30px;
 }
+@media only screen and (max-width: 576px) {
+  .product__property {
+    margin-bottom: 25px;
+  }
+  .product__property:last-child {
+    margin-bottom: 0;
+  }
+}
 .product__property p {
   width: 50%;
   font-size: 20px;
@@ -13468,6 +13492,12 @@ ul {
     background-image: url("../img/hero-02-mobile.png");
   }
 }
+@media only screen and (max-width: 576px) {
+  .about-content__hero h1 {
+    margin: 0 auto 30px;
+    max-width: 60%;
+  }
+}
 .about-content__brand {
   margin-bottom: 33px;
 }
@@ -13493,7 +13523,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 0 15px;
-  margin-bottom: 95px;
+  margin: 95px 0;
 }
 @media only screen and (max-width: 768px) {
   .inner-orange {
@@ -13530,6 +13560,7 @@ ul {
 }
 .quality__title {
   margin-bottom: 55px;
+  line-height: 1.2;
 }
 .quality p {
   font-size: 22px;
@@ -13537,6 +13568,7 @@ ul {
 @media only screen and (max-width: 768px) {
   .quality p {
     font-size: 16px;
+    padding: 0 15px;
   }
 }
 .quality .content__bdr {
@@ -13587,6 +13619,7 @@ ul {
   background-image: url("../img/aerosol-hero-bg.png");
   background-color: #000;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 @media only screen and (max-width: 768px) {
   .aerosol-hero {
@@ -13673,6 +13706,7 @@ ul {
     font-size: 16px;
     opacity: 1;
     max-width: 150px;
+    min-height: 40px;
     margin: 0 auto 16px;
   }
 }
@@ -13807,7 +13841,7 @@ ul {
   margin: 0 auto 40px;
 }
 .contacts__description {
-  margin-bottom: 54px;
+  margin-bottom: 36px;
   line-height: 34px;
 }
 .contacts p {
@@ -13843,7 +13877,7 @@ ul {
 }
 
 .map {
-  margin-bottom: 375px;
+  margin-bottom: 80px;
   z-index: 200;
 }
 

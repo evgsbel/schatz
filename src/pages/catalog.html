@@ -1,5 +1,5 @@
 ---
-layout: inner
+layout: default
 title: Catalog Page
 ---
 
@@ -46,17 +46,31 @@ title: Catalog Page
         <a href="category.html" class="lnk"></a>
       </div>
       <div class="col-6 col-md-3">
-        <img src="assets/img/ct-07.png" alt="" class="catalog__img">
-        <p class="catalog__caption">Тяги
-          <a href="category.html" class="lnk"></a>
-          стабилизатора</p>
-      </div>
-      <div class="col-6 col-md-3">
         <img src="assets/img/ct-08.png" alt="" class="catalog__img">
         <p class="catalog__caption">Опоры
           <a href="category.html" class="lnk"></a>
           двигателя</p>
       </div>
+      <div class="col-6 col-md-3">
+        <img src="assets/img/ct-07.png" alt="" class="catalog__img">
+        <p class="catalog__caption">Тяги
+          <a href="category.html" class="lnk"></a>
+          стабилизатора</p>
+      </div>
     </div>
   </div>
 </section>
+<div class="inner-search mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="title-h2 search__title">Поиск автозапчастей в каталоге Schatz</h2>
+      </div>
+    </div>
+  </div>
+  {{> search-form}}
+</div>
+<div class="desktop-hidden">
+  {{> advantages}}
+</div>
+{{> news-slider}}
