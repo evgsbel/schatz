@@ -127,7 +127,7 @@
             <div class="row">
               <div class="col-6 col-md-3 advantages__item">
                 <svg width="99" height="113" class="advantages__icon">
-                  <use xlink:href="assets/img/sprite.svg#icon-adv-01"></use>
+                  <use xlink:href="assets/img/sprite.svg#icon-wh-01"></use>
                 </svg>
                 <p class="advantages__caption">Надежность
                   и долговечность</p>
@@ -135,7 +135,7 @@
               </div>
               <div class="col-6 col-md-3 advantages__item">
                 <svg width="85" height="113" class="advantages__icon">
-                  <use xlink:href="assets/img/sprite.svg#icon-adv-02"></use>
+                  <use xlink:href="assets/img/sprite.svg#icon-wh-02"></use>
                 </svg>
                 <p class="advantages__caption">Оригинальное
                   соответсвие</p>
@@ -144,7 +144,7 @@
               </div>
               <div class="col-6 col-md-3 advantages__item">
                 <svg width="123" height="113" class="advantages__icon">
-                  <use xlink:href="assets/img/sprite.svg#icon-adv-03"></use>
+                  <use xlink:href="assets/img/sprite.svg#icon-wh-03"></use>
                 </svg>
                 <p class="advantages__caption">Максимальная
                   безопасность</p>
@@ -152,7 +152,7 @@
               </div>
               <div class="col-6 col-md-3 advantages__item">
                 <svg width="81" height="113" class="advantages__icon">
-                  <use xlink:href="assets/img/sprite.svg#icon-adv-04"></use>
+                  <use xlink:href="assets/img/sprite.svg#icon-wh-04"></use>
                 </svg>
                 <p class="advantages__caption">Абсолютная
                   эффективность</p>
@@ -413,49 +413,49 @@
           </div>
         </section>
         
-        <div class="section news-slider">
+        <div class="section news-slider article-slider">
           <div class="container">
             <div class="row">
               <div class="col-10 col-lg-12 offset-1 offset-lg-0">
-                <h2 class="title-h2 news-slider__title">Следите за нашими новостями</h2>
+                <h2 class="title-h2 news-slider__title article-slider__title">Следите за нашими новостями</h2>
                 <div class="swiper js-news-slider news-slider__swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide news__slider__item">
+                    <div class="swiper-slide news__slider__item article-slider__item">
                       <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
                       <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
                       <a href="news.html" class="lnk"></a>
                     </div>
-                    <div class="swiper-slide news__slider__item">
+                    <div class="swiper-slide news__slider__item article-slider__item">
                       <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
                       <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
                       <a href="news.html" class="lnk"></a>
                     </div>
-                    <div class="swiper-slide news__slider__item">
+                    <div class="swiper-slide news__slider__item article-slider__item">
                       <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
                       <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
                       <a href="news.html" class="lnk"></a>
                     </div>
-                    <div class="swiper-slide news__slider__item">
+                    <div class="swiper-slide news__slider__item article-slider__item">
                       <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
                       <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
                       <a href="news.html" class="lnk"></a>
                     </div>
-                    <div class="swiper-slide news__slider__item">
+                    <div class="swiper-slide news__slider__item article-slider__item">
                       <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
                       <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
                       <a href="news.html" class="lnk"></a>
                     </div>
-                    <div class="swiper-slide news__slider__item">
+                    <div class="swiper-slide news__slider__item article-slider__item">
                       <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
                       <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
                       <a href="news.html" class="lnk"></a>
                     </div>
-                    <div class="swiper-slide news__slider__item">
+                    <div class="swiper-slide news__slider__item article-slider__item">
                       <img src="assets/img/n-01.jpg" alt="" class="news-slider__img">
                       <p class="news-slider__caption">Новые поступления деталей трансмиссии</p>
                       <a href="news.html" class="lnk"></a>
                     </div>
-                    <div class="swiper-slide news__slider__item">
+                    <div class="swiper-slide news__slider__item article-slider__item">
                       <img src="assets/img/n-02.jpg" alt="" class="news-slider__img">
                       <p class="news-slider__caption">Открылся магазин нового дилера продукции</p>
                       <a href="news.html" class="lnk"></a>
@@ -517,6 +517,11 @@
     <script src="assets/vendor/js/swiper-bundle.js"></script>
     <script src="assets/vendor/js/inputmask.min.js"></script>
     <script src="assets/js/util/crossPlatform.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="assets/js/app.js"></script>
     <!-- endbuild -->
     

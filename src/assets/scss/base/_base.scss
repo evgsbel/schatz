@@ -115,6 +115,9 @@ img {
     top: 50%;
     z-index: 50;
     transition: opacity $trns;
+    svg {
+      stroke: #929292;
+    }
     &.swiper-button-disabled {
       opacity: .8;
     }

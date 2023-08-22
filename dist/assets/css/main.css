@@ -11759,6 +11759,9 @@ img {
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
+.slider-navigation__btn svg {
+  stroke: #929292;
+}
 .slider-navigation__btn.swiper-button-disabled {
   opacity: 0.8;
 }
@@ -13615,11 +13618,22 @@ ul {
 }
 
 .aerosol-hero {
+  position: relative;
   padding-top: 36px;
   background-image: url("../img/aerosol-hero-bg.png");
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.aerosol-hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(0%, #000), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0, #000 0%, rgba(0, 0, 0, 0) 100%);
 }
 @media only screen and (max-width: 768px) {
   .aerosol-hero {
@@ -13642,6 +13656,24 @@ ul {
     font-size: 18px;
   }
 }
+.aerosol-hero__nav-btn {
+  top: 80%;
+  opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  .aerosol-hero__nav-btn {
+    top: 90%;
+  }
+}
+.aerosol-hero__nav-btn svg {
+  stroke: #fff;
+}
+.aerosol-hero .slider-navigation__btn_next {
+  right: 0;
+}
+.aerosol-hero .slider-navigation__btn_prev {
+  left: 0;
+}
 
 .aerosol-product {
   display: -webkit-box;
@@ -13651,48 +13683,17 @@ ul {
       -ms-flex-align: center;
           align-items: center;
 }
-@media only screen and (max-width: 1024px) {
-  .aerosol-product {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
 .aerosol-product__item {
   position: relative;
   text-align: center;
 }
-@media only screen and (max-width: 1024px) {
-  .aerosol-product__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3%;
-            flex: 0 0 33.3%;
-    margin-bottom: 60px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .aerosol-product__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-  }
-}
-.aerosol-product__item_one, .aerosol-product__item_eight {
-  font-size: 10px;
-}
-.aerosol-product__item_two, .aerosol-product__item_seven {
-  font-size: 14px;
-}
-.aerosol-product__item_three, .aerosol-product__item_six {
-  font-size: 18px;
-}
-.aerosol-product__item_four, .aerosol-product__item_five {
-  font-size: 20px;
-}
-.aerosol-product__item:hover * {
+.aerosol-product__item.swiper-slide-active * {
   opacity: 1;
+}
+.aerosol-product__item img {
+  display: block;
+  width: 35%;
+  margin: 0 auto;
 }
 .aerosol-product__caption {
   margin-bottom: 16px;
@@ -13708,6 +13709,11 @@ ul {
     max-width: 150px;
     min-height: 40px;
     margin: 0 auto 16px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .aerosol-product__caption {
+    min-height: 60px;
   }
 }
 .aerosol-product__btn {

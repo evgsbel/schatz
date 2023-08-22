@@ -142,13 +142,296 @@ var swiperCategory = new Swiper(".js-category-slider", {
     }
   }
 });
+$(function () {
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth();
+    if (windowWidth < 576) {
+      var swiper = new Swiper(".js-aerosol-slider", {
+        loop: false,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".swiper-button-next-1",
+          prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            grabCursor: true,
+            spaceBetween: 10
+          },
+          480: {
+            slidesPerView: 2,
+            grabCursor: true,
+            spaceBetween: 10
+          },
+          768: {
+            slidesPerView: 3,
+            grabCursor: true,
+            spaceBetween: 30
+          }
+        }
+      });
+    } else {
+      var swiper = new Swiper(".js-aerosol-slider", {
+        initialSlide: 3,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 450,
+          modifier: 1,
+          slideShadows: false
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 3,
+            grabCursor: true,
+            spaceBetween: -30
+          },
+          768: {
+            slidesPerView: 3,
+            grabCursor: true,
+            effect: "coverflow",
+            spaceBetween: 0
+          }
+        }
+      });
+    }
+  }
+  checkWidth();
+  $(window).resize(function () {
+    checkWidth(); // проверит при изменении размера окна клиента
+  });
+});
 
 //read more
 $(function () {
-  var readMoreBtn = document.querySelector(".read-more");
-  var readMoreHide = document.querySelector(".read-more__hidden");
-  readMoreBtn.addEventListener('click', function (el) {
-    readMoreBtn.classList.toggle('is-open');
-    readMoreHide.classList.toggle('is-open');
+  if ($('.read-more').length) {
+    var readMoreBtn = document.querySelector(".read-more");
+    var readMoreHide = document.querySelector(".read-more__hidden");
+    readMoreBtn.addEventListener('click', function (el) {
+      readMoreBtn.classList.toggle('is-open');
+      readMoreHide.classList.toggle('is-open');
+    });
+  }
+});
+
+//animation
+$(function () {
+  $(window).on('load', function () {
+    $('.preloader__wrp').fadeOut();
+    var tl1p1 = new TimelineMax(),
+      tl1p2 = new TimelineMax(),
+      tl2p1 = new TimelineMax(),
+      tl2p2 = new TimelineMax(),
+      tl3p1 = new TimelineMax(),
+      tl3p2 = new TimelineMax(),
+      tl2p3 = new TimelineMax(),
+      tl4p2 = new TimelineMax();
+    var controller = new ScrollMagic.Controller();
+    tl1p1.staggerFromTo('.nav__item', .4, {
+      x: 30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 0.3).staggerFromTo('.logo', .6, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, .3).staggerFromTo('.hero__title', 1.2, {
+      x: -30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 0.6).staggerFromTo('.hero__subtitle', .8, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, 1).staggerFromTo('.hero__btn ', .8, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, 1).staggerFromTo('.search ', .8, {
+      x: -30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 1);
+    tl1p2.fromTo('.advantages__icon', .8, {
+      y: 30
+    }, {
+      y: 0
+    }, .5).staggerFromTo('.advantages__caption', .8, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.advantages__description', .8, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, .5);
+    tl2p3.fromTo('.category-slider__title', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.category-slider__item', .3, {
+      x: -10,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, .2);
+    tl2p1.fromTo('.about__logo', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.about p', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, "-=0.7").staggerFromTo('.about__img', .3, {
+      y: -50,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, .2);
+    tl3p1.fromTo('.about__brand-img', .3, {
+      y: -10,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, .2).staggerFromTo('.about__description', .3, {
+      y: -10,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, .2).staggerFromTo('.about__btn', .3, {
+      y: -5,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, .3);
+    tl3p2.fromTo('.service__caption', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.service__description', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.service__img', .8, {
+      rotationY: -40,
+      x: -10,
+      opacity: 0
+    }, {
+      rotationY: 0,
+      x: 0,
+      opacity: 1
+    }, .5);
+    tl2p2.fromTo('.article-slider__title', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.article-slider__item', .3, {
+      x: -10,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, .2);
+    tl4p2.fromTo('.footer__nav', .5, {
+      x: -30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      x: 0
+    }, .5).staggerFromTo('.footer__link', .5, {
+      x: 30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, .3).staggerFromTo('.footer__copy', .6, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, .3);
+    var scene1p1 = new ScrollMagic.Scene({
+      triggerElement: ".header",
+      triggerHook: 0
+      // reverse: false,
+    }).setTween(tl1p1).addTo(controller);
+    var scene1p2 = new ScrollMagic.Scene({
+      triggerElement: ".advantages",
+      triggerHook: 0.6
+      // reverse: false,
+    }).setTween(tl1p2).addTo(controller);
+    var scene2p1 = new ScrollMagic.Scene({
+      triggerElement: ".category-slider",
+      triggerHook: 0.6
+      // reverse: false,
+    }).setTween(tl2p3).addTo(controller);
+    var scene3p3 = new ScrollMagic.Scene({
+      triggerElement: ".about",
+      triggerHook: 0.6
+      // reverse: false,
+    }).setTween(tl2p1).addTo(controller);
+    var scene2p2 = new ScrollMagic.Scene({
+      triggerElement: ".about__brand",
+      triggerHook: 0.6
+      // reverse: false,
+    }).setTween(tl3p1).addTo(controller);
+    var scene3p2 = new ScrollMagic.Scene({
+      triggerElement: ".about",
+      triggerHook: 0.6
+      // reverse: false,
+    }).setTween(tl3p2).addTo(controller);
+    var scene4p1 = new ScrollMagic.Scene({
+      triggerElement: ".about__btn",
+      triggerHook: 0.6
+      // reverse: false,
+    }).setTween(tl2p2).addTo(controller);
+    var scene3p1 = new ScrollMagic.Scene({
+      triggerElement: ".footer",
+      triggerHook: 0.6
+      // reverse: false,
+    }).setTween(tl4p2).addTo(controller);
   });
 });
