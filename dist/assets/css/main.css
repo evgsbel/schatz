@@ -12066,8 +12066,6 @@ ul {
   background-color: #fff;
   -webkit-box-shadow: 0px 22px 19px 0px #D9D9D9;
           box-shadow: 0px 22px 19px 0px #D9D9D9;
-}
-.header_fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -12778,6 +12776,7 @@ ul {
 }
 
 .hero {
+  margin-top: 144px;
   padding-top: 90px;
   background-image: url("../img/hero-bg.png");
   background-repeat: no-repeat;

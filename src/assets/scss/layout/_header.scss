@@ -2,12 +2,13 @@
   padding: 40px 0;
   background-color: #fff;
   box-shadow: 0px 22px 19px 0px #D9D9D9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   &_fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+
   }
   @include r(1280) {
     padding: 20px;

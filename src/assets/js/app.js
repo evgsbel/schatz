@@ -242,31 +242,31 @@ $(() => {
     tlFooter = new TimelineMax()
     const controller = new ScrollMagic.Controller();
     tlHeader
-      .staggerFromTo('.nav__item', .4, {x:30,opacity:0}, {x:0,opacity: 1}, 0.3)
       .staggerFromTo('.logo', .6, {y:30,opacity:0}, {y:0,opacity:1}, .3)
-      .staggerFromTo('.hero__title', 1.2, {x:-30,opacity:0}, {x:0,opacity:1}, 0.6)
-      .staggerFromTo('.hero__subtitle', .8, {y:30,opacity:0}, {y:0,opacity:1}, 1)
-      .staggerFromTo('.hero__btn ', .8, {y:30,opacity:0}, {y:0,opacity:1}, 1)
-      .staggerFromTo('.search ', .8, {x:-30,opacity:0}, {x:0,opacity:1}, 1)
+      .staggerFromTo('.nav__item', .4, {x:30,opacity:0}, {x:0,opacity: 1}, 0.3)
+      .staggerFromTo('.hero__title', .5, {x:-30,opacity:0}, {x:0,opacity:1}, 0.3)
+      .staggerFromTo('.hero__subtitle', .5, {y:30,opacity:0}, {y:0,opacity:1}, 1)
+      .staggerFromTo('.hero__btn ', .5, {y:30,opacity:0}, {y:0,opacity:1}, 1)
+      .staggerFromTo('.search ', .5, {x:-30,opacity:0}, {x:0,opacity:1}, 1)
     tlAdv
-      .fromTo('.advantages__icon', .8, {y:30,opacity:0}, {y:0,opacity:1}, .5)
-      .staggerFromTo('.advantages__caption', .8, {y:30,opacity:0}, {opacity:1,y:0}, .5)
-      .staggerFromTo('.advantages__description', .8, {y:30,opacity:0}, {y:0,opacity:1}, .5)
+      .fromTo('.advantages__icon', .5, {y:30,opacity:0}, {y:0,opacity:1}, .5)
+      .staggerFromTo('.advantages p', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
     tlCatsld
       .fromTo('.category-slider__title', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
       .staggerFromTo('.category-slider__item', .3, {x:-10,opacity:0}, {x:0,opacity:1}, .2)
     tlAbout
+      .staggerFromTo('.about__caption', .4, {y:-50,opacity:0}, {y:0,opacity:1}, .2)
       .fromTo('.about__logo', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
       .staggerFromTo('.about p', .5, {y:30,opacity:0}, {y:0,opacity:1}, .5)
-      .staggerFromTo('.about__img', .3, {y:-50,opacity:0}, {y:0,opacity:1}, .2)
+      .staggerFromTo('.about__img', .3, {x:-50,opacity:0}, {x:0,opacity:1}, .2)
     tlBrand
       .fromTo('.about__brand-img', .3, {y:-10,opacity:0}, {y:0,opacity:1}, .2)
       .staggerFromTo('.about__description', .3, {y:-10,opacity:0}, {y:0,opacity:1}, .2)
       .staggerFromTo('.about__btn', .3, {y:-5,opacity:0}, {y:0,opacity:1}, .3)
     tlService
       .fromTo('.service__caption', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
+      .staggerFromTo('.service__img', .4, {rotationY:-40,x:-10,opacity:0}, {rotationY:0,x:0,opacity:1}, .5)
       .staggerFromTo('.service__description', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
-      .staggerFromTo('.service__img', .8, {rotationY:-40,x:-10,opacity:0}, {rotationY:0,x:0,opacity:1}, .5)
     tlArticle
       .fromTo('.article-slider__title', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
       .staggerFromTo('.article-slider__item', .3, {x:-10,opacity:0}, {x:0,opacity:1}, .2)
@@ -278,58 +278,60 @@ $(() => {
       triggerElement: ".header",
       triggerHook: 0,
       // reverse: false,
-    })
+    }).addIndicators()
       .setTween(tlHeader)
       .addTo(controller);
     const scene1p2 = new ScrollMagic.Scene({
-      triggerElement: ".advantages",
-      triggerHook: 0.6,
+      triggerElement: ".hero",
+      triggerHook: "onLeave",
       // reverse: false,
-    })
+    }).addIndicators()
       .setTween(tlAdv)
+      .addTo(controller);
+    const scene1p22 = new ScrollMagic.Scene({
+      triggerElement: ".advantages",
+      triggerHook: 0,
+      // reverse: false,
+    }).addIndicators()
+      .setTween(tlCatsld)
       .addTo(controller);
     const scene1p3 = new ScrollMagic.Scene({
       triggerElement: ".category-slider",
-      triggerHook: 0.6,
+      triggerHook: "onLeave",
       // reverse: false,
-    })
-      .setTween(tlCatsld)
-      .addTo(controller);
-    const scene1p4 = new ScrollMagic.Scene({
-      triggerElement: ".category-slider__item",
-      triggerHook: 0.6,
-      // reverse: false,
-    })
+    }).addIndicators()
       .setTween(tlAbout)
       .addTo(controller);
     const scene1p5 = new ScrollMagic.Scene({
       triggerElement: ".about",
-      triggerHook: 0.6,
+      triggerHook: "onLeave",
+
       // reverse: false,
-    })
+    }).addIndicators()
       .setTween(tlBrand)
       .addTo(controller);
     const scene1p6 = new ScrollMagic.Scene({
-      triggerElement: ".about__caption",
-      triggerHook: 0.6,
+      triggerElement: ".about__brand",
+      triggerHook: "onLeave",
       // reverse: false,
-    })
+    }).addIndicators()
 
       .setTween(tlService)
       .addTo(controller);
     const scene1p7 = new ScrollMagic.Scene({
       triggerElement: ".service",
-      triggerHook: 0.6,
+      triggerHook: "onLeave",
       // reverse: false,
-    })
+    }).addIndicators()
       .setTween(tlArticle)
       .addTo(controller);
     const scene1p8 = new ScrollMagic.Scene({
-      triggerElement: ".footer",
-      triggerHook: 0.6,
+      triggerElement: ".article-slider",
+      triggerHook: "onLeave",
       // reverse: false,
-    })
+    }).addIndicators()
       .setTween(tlFooter)
+      .addIndicators()
       .addTo(controller);
   });
 });
