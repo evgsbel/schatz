@@ -181,7 +181,7 @@ $(() => {
         loop: true,
         grabCursor: true,
         centeredSlides: true,
-
+        effect: "coverflow",
         coverflowEffect: {
           rotate: 0,
           stretch: 0,
@@ -195,14 +195,14 @@ $(() => {
         },
         breakpoints: {
           320: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             grabCursor: true,
             spaceBetween: -30,
           },
           768: {
             slidesPerView: 3,
             grabCursor: true,
-            effect: "coverflow",
+
             spaceBetween: 0,
           },
         }
