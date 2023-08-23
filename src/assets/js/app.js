@@ -232,46 +232,45 @@ $(() => {
 //animation
 $(() => {
   $(window).on('load', function () {
-    $('.preloader__wrp').fadeOut();
-    let tl1p1 = new TimelineMax(),
-    tl1p2 = new TimelineMax(),
-    tl2p1 = new TimelineMax(),
-    tl2p2 = new TimelineMax(),
-    tl3p1 = new TimelineMax(),
-    tl3p2 = new TimelineMax(),
-    tl2p3 = new TimelineMax(),
-    tl4p2 = new TimelineMax()
+    let tlHeader = new TimelineMax(),
+    tlAdv = new TimelineMax(),
+    tlBrand = new TimelineMax(),
+    tlArticle = new TimelineMax(),
+    tlAbout = new TimelineMax(),
+    tlService = new TimelineMax(),
+    tlCatsld = new TimelineMax(),
+    tlFooter = new TimelineMax()
     const controller = new ScrollMagic.Controller();
-    tl1p1
+    tlHeader
       .staggerFromTo('.nav__item', .4, {x:30,opacity:0}, {x:0,opacity: 1}, 0.3)
       .staggerFromTo('.logo', .6, {y:30,opacity:0}, {y:0,opacity:1}, .3)
       .staggerFromTo('.hero__title', 1.2, {x:-30,opacity:0}, {x:0,opacity:1}, 0.6)
       .staggerFromTo('.hero__subtitle', .8, {y:30,opacity:0}, {y:0,opacity:1}, 1)
       .staggerFromTo('.hero__btn ', .8, {y:30,opacity:0}, {y:0,opacity:1}, 1)
       .staggerFromTo('.search ', .8, {x:-30,opacity:0}, {x:0,opacity:1}, 1)
-    tl1p2
-      .fromTo('.advantages__icon', .8, {y:30}, {y:0}, .5)
+    tlAdv
+      .fromTo('.advantages__icon', .8, {y:30,opacity:0}, {y:0,opacity:1}, .5)
       .staggerFromTo('.advantages__caption', .8, {y:30,opacity:0}, {opacity:1,y:0}, .5)
       .staggerFromTo('.advantages__description', .8, {y:30,opacity:0}, {y:0,opacity:1}, .5)
-    tl2p3
+    tlCatsld
       .fromTo('.category-slider__title', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
       .staggerFromTo('.category-slider__item', .3, {x:-10,opacity:0}, {x:0,opacity:1}, .2)
-    tl2p1
+    tlAbout
       .fromTo('.about__logo', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
-      .staggerFromTo('.about p', .5, {y:30,opacity:0}, {y:0,opacity:1}, "-=0.7")
+      .staggerFromTo('.about p', .5, {y:30,opacity:0}, {y:0,opacity:1}, .5)
       .staggerFromTo('.about__img', .3, {y:-50,opacity:0}, {y:0,opacity:1}, .2)
-    tl3p1
+    tlBrand
       .fromTo('.about__brand-img', .3, {y:-10,opacity:0}, {y:0,opacity:1}, .2)
       .staggerFromTo('.about__description', .3, {y:-10,opacity:0}, {y:0,opacity:1}, .2)
       .staggerFromTo('.about__btn', .3, {y:-5,opacity:0}, {y:0,opacity:1}, .3)
-    tl3p2
+    tlService
       .fromTo('.service__caption', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
       .staggerFromTo('.service__description', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
       .staggerFromTo('.service__img', .8, {rotationY:-40,x:-10,opacity:0}, {rotationY:0,x:0,opacity:1}, .5)
-    tl2p2
+    tlArticle
       .fromTo('.article-slider__title', .5, {y:30,opacity:0}, {opacity:1,y:0}, .5)
       .staggerFromTo('.article-slider__item', .3, {x:-10,opacity:0}, {x:0,opacity:1}, .2)
-    tl4p2
+    tlFooter
       .fromTo('.footer__nav', .5, {x:-30,opacity:0}, {opacity:1,x:0}, .5)
       .staggerFromTo('.footer__link', .5, {x:30,opacity:0}, {x:0,opacity:1}, .3)
       .staggerFromTo('.footer__copy', .6, {y:30,opacity:0}, {y:0,opacity:1}, .3)
@@ -280,59 +279,57 @@ $(() => {
       triggerHook: 0,
       // reverse: false,
     })
-      .setTween(tl1p1)
+      .setTween(tlHeader)
       .addTo(controller);
     const scene1p2 = new ScrollMagic.Scene({
       triggerElement: ".advantages",
       triggerHook: 0.6,
       // reverse: false,
     })
-      .setTween(tl1p2)
+      .setTween(tlAdv)
       .addTo(controller);
-    const scene2p1 = new ScrollMagic.Scene({
+    const scene1p3 = new ScrollMagic.Scene({
       triggerElement: ".category-slider",
       triggerHook: 0.6,
       // reverse: false,
     })
-      .setTween(tl2p3)
+      .setTween(tlCatsld)
       .addTo(controller);
-    const scene3p3 = new ScrollMagic.Scene({
+    const scene1p4 = new ScrollMagic.Scene({
+      triggerElement: ".category-slider__item",
+      triggerHook: 0.6,
+      // reverse: false,
+    })
+      .setTween(tlAbout)
+      .addTo(controller);
+    const scene1p5 = new ScrollMagic.Scene({
       triggerElement: ".about",
       triggerHook: 0.6,
       // reverse: false,
     })
-
-      .setTween(tl2p1)
+      .setTween(tlBrand)
       .addTo(controller);
-    const scene2p2 = new ScrollMagic.Scene({
-      triggerElement: ".about__brand",
+    const scene1p6 = new ScrollMagic.Scene({
+      triggerElement: ".about__caption",
       triggerHook: 0.6,
       // reverse: false,
     })
 
-
-      .setTween(tl3p1)
+      .setTween(tlService)
       .addTo(controller);
-    const scene3p2 = new ScrollMagic.Scene({
-      triggerElement: ".about",
+    const scene1p7 = new ScrollMagic.Scene({
+      triggerElement: ".service",
       triggerHook: 0.6,
       // reverse: false,
     })
-      .setTween(tl3p2)
+      .setTween(tlArticle)
       .addTo(controller);
-    const scene4p1 = new ScrollMagic.Scene({
-      triggerElement: ".about__btn",
-      triggerHook: 0.6,
-      // reverse: false,
-    })
-      .setTween(tl2p2)
-      .addTo(controller);
-    const scene3p1 = new ScrollMagic.Scene({
+    const scene1p8 = new ScrollMagic.Scene({
       triggerElement: ".footer",
       triggerHook: 0.6,
       // reverse: false,
     })
-      .setTween(tl4p2)
+      .setTween(tlFooter)
       .addTo(controller);
   });
 });
