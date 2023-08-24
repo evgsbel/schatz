@@ -398,42 +398,41 @@ $(function () {
       triggerElement: ".header",
       triggerHook: 0
       // reverse: false,
-    }).addIndicators().setTween(tlHeader).addTo(controller);
+    }).setTween(tlHeader).addTo(controller);
     var scene1p2 = new ScrollMagic.Scene({
       triggerElement: ".hero",
       triggerHook: "onLeave"
       // reverse: false,
-    }).addIndicators().setTween(tlAdv).addTo(controller);
+    }).setTween(tlAdv).addTo(controller);
     var scene1p22 = new ScrollMagic.Scene({
       triggerElement: ".advantages",
       triggerHook: 0
       // reverse: false,
-    }).addIndicators().setTween(tlCatsld).addTo(controller);
+    }).setTween(tlCatsld).addTo(controller);
     var scene1p3 = new ScrollMagic.Scene({
       triggerElement: ".category-slider",
       triggerHook: "onLeave"
       // reverse: false,
-    }).addIndicators().setTween(tlAbout).addTo(controller);
+    }).setTween(tlAbout).addTo(controller);
     var scene1p5 = new ScrollMagic.Scene({
       triggerElement: ".about",
       triggerHook: "onLeave"
-
       // reverse: false,
-    }).addIndicators().setTween(tlBrand).addTo(controller);
+    }).setTween(tlBrand).addTo(controller);
     var scene1p6 = new ScrollMagic.Scene({
       triggerElement: ".about__brand",
       triggerHook: "onLeave"
       // reverse: false,
-    }).addIndicators().setTween(tlService).addTo(controller);
+    }).setTween(tlService).addTo(controller);
     var scene1p7 = new ScrollMagic.Scene({
       triggerElement: ".service",
       triggerHook: "onLeave"
       // reverse: false,
-    }).addIndicators().setTween(tlArticle).addTo(controller);
+    }).setTween(tlArticle).addTo(controller);
     var scene1p8 = new ScrollMagic.Scene({
       triggerElement: ".article-slider",
       triggerHook: "onLeave"
       // reverse: false,
-    }).addIndicators().setTween(tlFooter).addIndicators().addTo(controller);
+    }).setTween(tlFooter).addTo(controller);
   });
 });

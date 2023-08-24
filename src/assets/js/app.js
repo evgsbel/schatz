@@ -278,60 +278,57 @@ $(() => {
       triggerElement: ".header",
       triggerHook: 0,
       // reverse: false,
-    }).addIndicators()
+    })
       .setTween(tlHeader)
       .addTo(controller);
     const scene1p2 = new ScrollMagic.Scene({
       triggerElement: ".hero",
       triggerHook: "onLeave",
       // reverse: false,
-    }).addIndicators()
+    })
       .setTween(tlAdv)
       .addTo(controller);
     const scene1p22 = new ScrollMagic.Scene({
       triggerElement: ".advantages",
       triggerHook: 0,
       // reverse: false,
-    }).addIndicators()
+    })
       .setTween(tlCatsld)
       .addTo(controller);
     const scene1p3 = new ScrollMagic.Scene({
       triggerElement: ".category-slider",
       triggerHook: "onLeave",
       // reverse: false,
-    }).addIndicators()
+    })
       .setTween(tlAbout)
       .addTo(controller);
     const scene1p5 = new ScrollMagic.Scene({
       triggerElement: ".about",
       triggerHook: "onLeave",
-
       // reverse: false,
-    }).addIndicators()
+    })
       .setTween(tlBrand)
       .addTo(controller);
     const scene1p6 = new ScrollMagic.Scene({
       triggerElement: ".about__brand",
       triggerHook: "onLeave",
       // reverse: false,
-    }).addIndicators()
-
+    })
       .setTween(tlService)
       .addTo(controller);
     const scene1p7 = new ScrollMagic.Scene({
       triggerElement: ".service",
       triggerHook: "onLeave",
       // reverse: false,
-    }).addIndicators()
+    })
       .setTween(tlArticle)
       .addTo(controller);
     const scene1p8 = new ScrollMagic.Scene({
       triggerElement: ".article-slider",
       triggerHook: "onLeave",
       // reverse: false,
-    }).addIndicators()
+    })
       .setTween(tlFooter)
-      .addIndicators()
       .addTo(controller);
   });
 });
